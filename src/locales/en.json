@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Domixa",
+    "properties": "Properties",
+    "projects": "Projects",
+    "developers": "Developers",
+    "locations": "Locations",
+    "investors": "Investors",
+    "careers": "Careers",
+    "media": "News & Media",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title_badge": "Establishment of Excellence",
+    "title_part1": "Beyond the",
+    "title_part2": "Ordinary.",
+    "description": "Discover the most exclusive real estate portfolio in the Middle East. Engineered for high-net-worth growth and timeless luxury.",
+    "fields": {
+      "region": "Region",
+      "asset_type": "Asset Type",
+      "price_range": "Price Range"
+    },
+    "search_btn": "Search Portfolio",
+    "award": "Awarded Best Luxury Brokerage 2024",
+    "sales_vol": "Sales Vol.",
+    "asset_units": "Asset Units",
+    "watch_film": "Watch Film",
+    "discovery": "Discovery",
+    "follow": "Follow Domixa"
+  },
+  "project": {
+    "narrative": "Project Narrative",
+    "beyond": "Beyond Ordinary",
+    "security": "Financial Security",
+    "limited": "Limited Availability",
+    "masterplan": "Master Plan Developments",
+    "launch_map": "Launch Interactive Map"
+  },
+  "home": {
+    "featured": "Featured Properties",
+    "latest": "Latest Projects",
+    "view_all": "View All",
+    "stats": {
+      "years": "Years of Excellence",
+      "projects": "Major Projects",
+      "clients": "Happy Clients"
+    }
+  },
+  "common": {
+    "details": "View Details",
+    "apply": "Apply Now",
+    "read_more": "Read More"
+  }
+}
