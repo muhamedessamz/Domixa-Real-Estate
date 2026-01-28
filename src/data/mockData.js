@@ -74,3 +74,41 @@ export const careers = [
     location: "Dubai"
   }
 ];
+
+export const news = [
+  {
+    id: 1,
+    title: { en: "Domixa Announces Q4 Record Growth", ar: "دوميكسا تعلن عن نمو قياسي في الربع الرابع" },
+    date: "Jan 24, 2026",
+    category: { en: "Corporate", ar: "مؤسسي" },
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 2,
+    title: { en: "Sustainable Living: The Future of UAE", ar: "الحياة المستدامة: مستقبل الإمارات" },
+    date: "Jan 15, 2026",
+    category: { en: "Lifestyle", ar: "أسلوب الحياة" },
+    image: "https://images.unsplash.com/photo-1518005020470-588a3a307a00?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 3,
+    title: { en: "Expansion into International Markets", ar: "التوسع في الأسواق الدولية" },
+    date: "Jan 02, 2026",
+    category: { en: "Strategy", ar: "إستراتيجية" },
+    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80"
+  }
+];
+
+export const developers = [
+  { id: 1, name: "Emaar Properties", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Emaar_Properties_Logo.svg/1024px-Emaar_Properties_Logo.svg.png" },
+  { id: 2, name: "Nakheel", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Nakheel_Logo.svg/1200px-Nakheel_Logo.svg.png" },
+  { id: 3, name: "DAMAC Properties", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Damac_Properties_Logo.svg/1200px-Damac_Properties_Logo.svg.png" },
+  { id: 4, name: "Dubai Properties", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Dubai_Properties_logo.svg/1200px-Dubai_Properties_logo.svg.png" }
+];
+
+export const investorStats = [
+  { label: { en: "Revenue Growth", ar: "نمو الإيرادات" }, value: "+24%", trend: "up" },
+  { label: { en: "Asset Value", ar: "قيمة الأصول" }, value: "AED 12.4B", trend: "up" },
+  { label: { en: "Dividend Yield", ar: "عائد التوزيعات" }, value: "6.8%", trend: "neutral" },
+  { label: { en: "Net Profit", ar: "صافي الربح" }, value: "AED 1.2B", trend: "up" }
+];

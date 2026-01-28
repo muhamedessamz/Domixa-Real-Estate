@@ -13,8 +13,9 @@ const Projects = lazy(() => import('./pages/Projects'));
 const Locations = lazy(() => import('./pages/Locations'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Careers = lazy(() => import('./pages/Careers'));
-const Investors = lazy(() => import('./pages/SubPages').then(m => ({ default: m.Investors })));
-const News = lazy(() => import('./pages/SubPages').then(m => ({ default: m.News })));
+const Investors = lazy(() => import('./pages/Investors'));
+const News = lazy(() => import('./pages/News'));
+const Developers = lazy(() => import('./pages/Developers'));
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/investors" element={<Investors />} />
               <Route path="/news" element={<News />} />
+              <Route path="/developers" element={<Developers />} />
             </Routes>
           </Suspense>
         </main>

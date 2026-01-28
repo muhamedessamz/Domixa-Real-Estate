@@ -51,5 +51,25 @@
     "details": "View Details",
     "apply": "Apply Now",
     "read_more": "Read More"
+  },
+  "investors": {
+    "title": "Investor Relations",
+    "subtitle": "Institutional Governance",
+    "narrative": "Sustainable wealth through strategic urban development.",
+    "performance": "Financial Performance",
+    "governance": "Board of Directors",
+    "reports": "Annual Reports"
+  },
+  "news": {
+    "title": "News & Media",
+    "subtitle": "Real Estate Dispatch",
+    "featured": "Breaking Story",
+    "latest": "Recent Updates",
+    "press": "Press Releases"
+  },
+  "developers": {
+    "title": "Partner Developers",
+    "subtitle": "Institutional Alliances",
+    "description": "Collaborating with global master developers to architect the future of UAE."
   }
 }
