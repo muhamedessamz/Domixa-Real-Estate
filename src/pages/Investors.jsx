@@ -24,7 +24,7 @@ const Investors = () => {
                     >
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('investors.subtitle')}</span>
                         <h1 className="text-6xl md:text-9xl font-serif text-white italic leading-[0.8] mb-12">
-                            Institutional <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Governance.</span>
+                            {i18n.language === 'ar' ? 'حوكمة' : 'Institutional'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'مؤسسية.' : 'Governance.'}</span>
                         </h1>
                         <p className="text-white/50 text-2xl font-light italic max-w-2xl">
                             "{t('investors.narrative')}"
@@ -38,8 +38,8 @@ const Investors = () => {
                 <div className="max-w-[1400px] mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
                         <div>
-                            <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('investors.performance')}</span>
-                            <h2 className="text-5xl md:text-7xl font-serif text-domixa-dark italic">Financial <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Velocity.</span></h2>
+                            <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('investors.performance_title')}</span>
+                            <h2 className="text-5xl md:text-7xl font-serif text-domixa-dark italic">{i18n.language === 'ar' ? 'كفاءة' : 'Financial'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'مالية.' : 'Velocity.'}</span></h2>
                         </div>
                     </div>
 
@@ -68,13 +68,13 @@ const Investors = () => {
             <section className="bg-domixa-dark py-40 overflow-hidden relative">
                 <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                     <div>
-                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— Trust & Transparency</span>
-                        <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-tight mb-12">Fiduciary <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Excellence.</span></h2>
+                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('investors.fiduciary.title')}</span>
+                        <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-tight mb-12">{i18n.language === 'ar' ? 'تميز' : 'Fiduciary'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'ائتماني.' : 'Excellence.'}</span></h2>
                         <div className="space-y-8">
                             {[
-                                { icon: ShieldCheck, title: "Risk Mitigation", desc: "Rigorous stress-testing of all capital deployments." },
-                                { icon: Landmark, title: "Legal Sovereignty", desc: "Adherence to international real estate legislation." },
-                                { icon: Users, title: "Board Oversight", desc: "Independent directors ensuring shareholder alignment." }
+                                { icon: ShieldCheck, title: t('investors.fiduciary.risk'), desc: t('investors.fiduciary.risk_desc') },
+                                { icon: Landmark, title: t('investors.fiduciary.legal'), desc: t('investors.fiduciary.legal_desc') },
+                                { icon: Users, title: t('investors.fiduciary.users'), desc: t('investors.fiduciary.users_desc') }
                             ].map((item, i) => (
                                 <div key={i} className="flex space-x-6 rtl:space-x-reverse items-start">
                                     <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-domixa-gold flex-shrink-0">
@@ -92,10 +92,10 @@ const Investors = () => {
                         <div className="aspect-square rounded-[4rem] bg-gradient-to-br from-domixa-gold/20 to-transparent p-1">
                             <div className="w-full h-full rounded-[4rem] overflow-hidden bg-domixa-dark flex items-center justify-center p-20 text-center">
                                 <div>
-                                    <h3 className="text-white text-3xl font-serif italic mb-8">Annual Report 2025</h3>
+                                    <h3 className="text-white text-3xl font-serif italic mb-8">{t('investors.reports.title')}</h3>
                                     <button className="btn-elite bg-domixa-gold text-domixa-dark rounded-full hover:bg-white flex items-center transition-all">
                                         <Download size={16} className="mr-3 rtl:ml-3" />
-                                        <span>Download PDF</span>
+                                        <span>{t('investors.reports.cta')}</span>
                                     </button>
                                 </div>
                             </div>

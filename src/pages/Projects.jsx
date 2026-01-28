@@ -14,16 +14,16 @@ const Projects = () => {
                 <div className="flex flex-col lg:flex-row justify-between items-end mb-32 border-b border-gray-100 pb-20 gap-12">
                     <div className="max-w-3xl">
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('project.masterplan')}</span>
-                        <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic">Architecting <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Iconic Hubs.</span></h1>
+                        <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">{i18n.language === 'ar' ? 'هندسة' : 'Architecting'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'مراكز أيقونية.' : 'Iconic Hubs.'}</span></h1>
                     </div>
                     <div className="flex space-x-12 rtl:space-x-reverse pb-4">
-                        <div className="text-right">
+                        <div className="text-right rtl:text-left">
                             <p className="text-5xl font-black text-domixa-dark">12</p>
-                            <p className="text-[10px] uppercase font-bold text-gray-400 tracking-widest mt-2">Active Sites</p>
+                            <p className="text-[10px] uppercase font-bold text-gray-400 tracking-widest mt-2">{t('project.header.active')}</p>
                         </div>
-                        <div className="text-right">
+                        <div className="text-right rtl:text-left">
                             <p className="text-5xl font-black text-domixa-dark">45</p>
-                            <p className="text-[10px] uppercase font-bold text-gray-400 tracking-widest mt-2">Delivered</p>
+                            <p className="text-[10px] uppercase font-bold text-gray-400 tracking-widest mt-2">{t('project.header.delivered')}</p>
                         </div>
                     </div>
                 </div>
@@ -40,8 +40,8 @@ const Projects = () => {
 
                         <div className="relative z-10 text-center space-y-12 max-w-2xl px-8">
                             <Compass size={64} className="text-domixa-gold mx-auto animate-pulse" />
-                            <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-tight">Explore the <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Masterplan.</span></h2>
-                            <p className="text-white/40 text-lg font-light italic">Navigate through our integrated communities. From dedicated commercial zones to lush residential districts.</p>
+                            <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-tight">{i18n.language === 'ar' ? 'استكشف' : 'Explore the'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'المخطط العام.' : 'Masterplan.'}</span></h2>
+                            <p className="text-white/40 text-lg font-light italic">{t('project.experience.desc')}</p>
                             <button className="btn-elite rounded-2xl bg-white text-domixa-dark hover:bg-domixa-gold transition-all">{t('project.launch_map')}</button>
                         </div>
 
@@ -50,8 +50,8 @@ const Projects = () => {
                             <div className="w-4 h-4 bg-domixa-gold rounded-full animate-ping"></div>
                             <div className="absolute top-0 left-0 w-4 h-4 bg-domixa-gold rounded-full"></div>
                             <div className="absolute top-8 left-1/2 -translate-x-1/2 bg-white p-4 rounded-xl shadow-2xl opacity-0 group-hover/dot:opacity-100 transition-opacity w-48 text-center border border-gray-100">
-                                <p className="text-[10px] font-black uppercase tracking-widest text-domixa-dark">Vinci District</p>
-                                <p className="text-xs text-gray-400 italic">Premium Residential Zone</p>
+                                <p className="text-[10px] font-black uppercase tracking-widest text-domixa-dark">{t('project.experience.district')}</p>
+                                <p className="text-xs text-gray-400 italic">{t('project.experience.zone')}</p>
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@ const Projects = () => {
                                         <Calendar size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-[10px] uppercase font-black text-gray-300 tracking-[0.2em] mb-1">Status</p>
+                                        <p className="text-[10px] uppercase font-black text-gray-300 tracking-[0.2em] mb-1">{t('project.feed.status')}</p>
                                         <p className="text-sm font-black text-domixa-dark uppercase">{project.status[i18n.language]}</p>
                                     </div>
                                 </div>
@@ -90,7 +90,7 @@ const Projects = () => {
                             <div className="flex-1 space-y-10">
                                 <div className="flex items-center space-x-3 rtl:space-x-reverse text-domixa-gold font-bold text-xs uppercase tracking-[0.3em]">
                                     <ShieldCheck size={18} />
-                                    <span>Certified Quality</span>
+                                    <span>{t('project.feed.quality')}</span>
                                 </div>
                                 <h2 className="text-5xl md:text-6xl font-serif font-black text-domixa-dark italic leading-tight">{project.name[i18n.language]}</h2>
                                 <div className="flex items-center text-gray-400 space-x-3 rtl:space-x-reverse">
@@ -98,16 +98,16 @@ const Projects = () => {
                                     <span className="text-xl font-light italic">{project.location[i18n.language]}</span>
                                 </div>
                                 <p className="text-gray-500 text-lg leading-relaxed font-light">
-                                    A master-planned marvel designed to coexist with nature. This project integrates state-of-the-art infrastructure with artistic landscaping to provide a holistic urban retreat.
+                                    {t('project.feed.desc')}
                                 </p>
                                 <div className="pt-4 flex items-center space-x-8">
                                     <button className="btn-elite rounded-2xl flex items-center space-x-3 rtl:space-x-reverse">
-                                        <span>View Dossier</span>
+                                        <span>{t('project.feed.dossier')}</span>
                                         <ArrowUpRight size={18} />
                                     </button>
                                     <div className="hidden lg:flex flex-col">
                                         <p className="text-2xl font-black text-domixa-dark">98%</p>
-                                        <p className="text-[8px] font-black uppercase text-gray-300 tracking-widest">Progress</p>
+                                        <p className="text-[8px] font-black uppercase text-gray-300 tracking-widest">{t('project.feed.progress')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -119,8 +119,8 @@ const Projects = () => {
             {/* Strategic Partners Section */}
             <section className="mt-40 section-premium bg-domixa-gray">
                 <div className="max-w-[1400px] mx-auto text-center">
-                    <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— Institutional Alliances</span>
-                    <h2 className="text-5xl font-serif text-domixa-dark italic mb-24">Global Partners</h2>
+                    <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('project.alliances.badge')}</span>
+                    <h2 className="text-5xl font-serif text-domixa-dark italic mb-24">{t('project.alliances.title')}</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-20 opacity-30 grayscale hover:grayscale-0 transition-all duration-700 items-center">
                         <div className="font-serif text-3xl font-bold italic tracking-tighter">EMAAR.</div>
                         <div className="font-serif text-3xl font-bold italic tracking-tighter">MISR ITALIA.</div>

@@ -16,7 +16,7 @@ const Footer = () => {
                             DOMI<span className="text-domixa-gold">XA</span>
                         </h3>
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            Domixa is a leading real estate developer and investment company in the UAE, dedicated to delivering excellence and luxury across Dubai, Abu Dhabi, and Sharjah.
+                            {t('footer.brand_desc')}
                         </p>
                         <div className="flex space-x-4 rtl:space-x-reverse">
                             <a href="#" className="hover:text-domixa-gold transition-colors"><Facebook size={20} /></a>
@@ -41,12 +41,12 @@ const Footer = () => {
 
                     {/* Services */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-6 border-b border-domixa-gold w-fit pb-1">Our Services</h4>
+                        <h4 className="text-lg font-semibold mb-6 border-b border-domixa-gold w-fit pb-1">{t('footer.services_title')}</h4>
                         <ul className="space-y-4 text-sm text-gray-400">
-                            <li>Property Management</li>
-                            <li>Investment Consultancy</li>
-                            <li>Project Development</li>
-                            <li>Legal Advisory</li>
+                            <li>{t('footer.services.prop_mgmt')}</li>
+                            <li>{t('footer.services.inv_consult')}</li>
+                            <li>{t('footer.services.proj_dev')}</li>
+                            <li>{t('footer.services.legal')}</li>
                         </ul>
                     </div>
 
@@ -56,7 +56,7 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-start space-x-3 rtl:space-x-reverse group">
                                 <MapPin size={20} className="text-domixa-gold group-hover:scale-110 transition-transform" />
-                                <span className="text-gray-400 text-sm italic">Business Bay, Vision Tower, Dubai, UAE</span>
+                                <span className="text-gray-400 text-sm italic">{t('footer.address')}</span>
                             </li>
                             <li className="flex items-center space-x-3 rtl:space-x-reverse group">
                                 <Phone size={20} className="text-domixa-gold group-hover:scale-110 transition-transform" />
@@ -71,10 +71,10 @@ const Footer = () => {
                 </div>
 
                 <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-gray-500 text-xs uppercase tracking-widest">
-                    <p>© 2026 Domixa Real Estate. All rights reserved.</p>
+                    <p>{t('footer.copyright')}</p>
                     <div className="flex space-x-6 rtl:space-x-reverse">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                        <a href="#" className="hover:text-white transition-colors">{t('footer.links.privacy')}</a>
+                        <a href="#" className="hover:text-white transition-colors">{t('footer.links.terms')}</a>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,11 @@
     "investors": "Investors",
     "careers": "Careers",
     "media": "News & Media",
-    "contact": "Contact"
+    "contact": "Contact",
+    "toggle": {
+      "ar": "Arabic",
+      "en": "English"
+    }
   },
   "hero": {
     "title_badge": "Establishment of Excellence",
@@ -29,47 +33,210 @@
     "discovery": "Discovery",
     "follow": "Follow Domixa"
   },
+  "home": {
+    "featured": {
+      "badge": "The Curated Collection",
+      "title": "Elite Residences",
+      "explore": "Explore All"
+    },
+    "about": {
+      "badge": "Our Vision",
+      "title": "Crafting Iconic Destinations",
+      "description": "At Domixa, we don't just develop properties. We engineer legacies that stand the test of time, blending futuristic luxury with the soul of the UAE.",
+      "stat_label": "Years of Excellence",
+      "global_title": "Global Reach",
+      "global_desc": "Investments across 4 major UAE hubs and international markets.",
+      "elite_title": "Elite Service",
+      "elite_desc": "Personalized advisory for high-net-worth portfolio management.",
+      "cta": "Discover Domixa"
+    },
+    "cta": {
+      "title": "Begin Your Journey",
+      "description": "Join the ranks of elite investors across the world's most dynamic real estate market.",
+      "contact": "Contact Private Sales",
+      "view_all": "View All Residencies"
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "Established 2005",
+      "title": "A Legacy of Excellence",
+      "description": "For over two decades, Domixa has been the architect of luxury and the catalyst for strategic growth in the United Arab Emirates. We don't just build; we redefine skylines.",
+      "stats": {
+        "awards": "Global Awards",
+        "assets": "Assets Managed"
+      },
+      "quote": "Architecture should speak of its time and place, but yearn for timelessness."
+    },
+    "philosophy": {
+      "vision_title": "Strategic Vision",
+      "vision_desc": "Pioneering sustainable and futuristic urban landscapes that anticipate the needs of tomorrow's global citizens.",
+      "trust_title": "Institutional Trust",
+      "trust_desc": "A foundation built on transparency, legal excellence, and unwavering commitment to our investors' dividends."
+    },
+    "leadership": {
+      "badge": "Leadership",
+      "title": "The Global Council"
+    }
+  },
   "project": {
     "narrative": "Project Narrative",
     "beyond": "Beyond Ordinary",
     "security": "Financial Security",
     "limited": "Limited Availability",
     "masterplan": "Master Plan Developments",
-    "launch_map": "Launch Interactive Map"
-  },
-  "home": {
-    "featured": "Featured Properties",
-    "latest": "Latest Projects",
-    "view_all": "View All",
-    "stats": {
-      "years": "Years of Excellence",
-      "projects": "Major Projects",
-      "clients": "Happy Clients"
+    "launch_map": "Launch Interactive Map",
+    "header": {
+      "title": "Architecting Iconic Hubs.",
+      "active": "Active Sites",
+      "delivered": "Delivered"
+    },
+    "experience": {
+      "title": "Explore the Masterplan.",
+      "desc": "Navigate through our integrated communities. From dedicated commercial zones to lush residential districts.",
+      "district": "Vinci District",
+      "zone": "Premium Residential Zone"
+    },
+    "feed": {
+      "quality": "Certified Quality",
+      "status": "Status",
+      "desc": "A master-planned marvel designed to coexist with nature. This project integrates state-of-the-art infrastructure with artistic landscaping to provide a holistic urban retreat.",
+      "dossier": "View Dossier",
+      "progress": "Progress"
+    },
+    "alliances": {
+      "badge": "Institutional Alliances",
+      "title": "Global Partners"
     }
   },
-  "common": {
-    "details": "View Details",
-    "apply": "Apply Now",
-    "read_more": "Read More"
+  "properties": {
+    "header": {
+      "badge": "Property Catalog",
+      "title": "Global Inventory",
+      "desc": "Refined search for the world's most desired addresses. Filter by city, lifestyle, or investment yield.",
+      "sort": "Sort By:",
+      "sort_opt": "Premium First"
+    },
+    "search": {
+      "placeholder": "Search by neighborhood or development..."
+    },
+    "cities": {
+      "all": "All",
+      "dubai": "Dubai",
+      "abu_dhabi": "Abu Dhabi",
+      "sharjah": "Sharjah",
+      "ajman": "Ajman"
+    }
   },
   "investors": {
     "title": "Investor Relations",
     "subtitle": "Institutional Governance",
     "narrative": "Sustainable wealth through strategic urban development.",
-    "performance": "Financial Performance",
-    "governance": "Board of Directors",
-    "reports": "Annual Reports"
+    "performance_title": "Financial Velocity",
+    "metrics": {
+      "revenue": "Revenue Growth",
+      "assets": "Asset Value",
+      "dividend": "Dividend Yield",
+      "profit": "Net Profit"
+    },
+    "fiduciary": {
+      "title": "Fiduciary Excellence",
+      "risk": "Risk Mitigation",
+      "risk_desc": "Rigorous stress-testing of all capital deployments.",
+      "legal": "Legal Sovereignty",
+      "legal_desc": "Adherence to international real estate legislation.",
+      "users": "Board Oversight",
+      "users_desc": "Independent directors ensuring shareholder alignment."
+    },
+    "reports": {
+      "title": "Annual Report 2025",
+      "cta": "Download PDF"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Private Advisory",
+      "title": "Global Engagement",
+      "desc": "Discretionary consultancy and personalized portfolio management for the world's most discerning investors."
+    },
+    "hq": {
+      "title": "United Arab Emirates",
+      "hub": "Dubai Hub",
+      "line": "Direct Line",
+      "email": "Electronic Correspondence",
+      "locate": "Locate Our Offices"
+    },
+    "form": {
+      "title": "Mandate Inquiry",
+      "name": "Legal Name",
+      "name_placeholder": "Your full name",
+      "email": "Email Address",
+      "email_placeholder": "email@address.com",
+      "interest": "Portfolio Interest",
+      "message": "Message / Brief",
+      "message_placeholder": "Briefly describe your investment requirements...",
+      "cta": "Initiate Contact",
+      "confidential": "Confidentiality Guaranteed",
+      "options": {
+        "off_plan": "Off-Plan Investment",
+        "secondary": "Luxury Secondary Market",
+        "institutional": "Institutional Mandate",
+        "commercial": "Commercial Portfolio"
+      }
+    }
   },
   "news": {
     "title": "News & Media",
     "subtitle": "Real Estate Dispatch",
-    "featured": "Breaking Story",
-    "latest": "Recent Updates",
-    "press": "Press Releases"
+    "featured": {
+      "badge": "Breaking Story",
+      "description": "Our latest quarterly analysis reveals unprecedented growth in high-yield assets across the UAE.",
+      "cta": "Read Full Story"
+    },
+    "latest_title": "Recent Updates",
+    "newsletter": {
+      "title": "Elite Subscription",
+      "description": "Receive exclusive market insights and early property notifications directly to your inbox.",
+      "cta": "Join Circle",
+      "placeholder": "Email Address"
+    }
   },
   "developers": {
     "title": "Partner Developers",
     "subtitle": "Institutional Alliances",
-    "description": "Collaborating with global master developers to architect the future of UAE."
+    "description": "Collaborating with global master developers to architect the future of UAE.",
+    "alliance_title": "Architectural Alliances",
+    "philosophy": {
+      "infra": "Infrastructure",
+      "infra_desc": "Collaborating on Tier-1 infrastructure developments.",
+      "jv": "Joint Ventures",
+      "jv_desc": "Strategic co-investments in emerging luxury markets.",
+      "global": "Global Standards",
+      "global_desc": "Importing international expertise to UAE real estate."
+    }
+  },
+  "footer": {
+    "brand_desc": "Domixa is a leading real estate developer and investment company in the UAE, dedicated to delivering excellence and luxury across Dubai, Abu Dhabi, and Sharjah.",
+    "services_title": "Our Services",
+    "services": {
+      "prop_mgmt": "Property Management",
+      "inv_consult": "Investment Consultancy",
+      "proj_dev": "Project Development",
+      "legal": "Legal Advisory"
+    },
+    "address": "Business Bay, Vision Tower, Dubai, UAE",
+    "copyright": "© 2026 Domixa Real Estate. All rights reserved.",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "common": {
+    "details": "View Details",
+    "apply": "Apply Now",
+    "read_more": "Read More",
+    "beds": "Beds",
+    "sqm": "m²",
+    "explore": "Explore"
   }
 }

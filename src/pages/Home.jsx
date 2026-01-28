@@ -18,13 +18,13 @@ const Home = () => {
                 <div className="max-w-[1400px] mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
                         <div className="max-w-2xl">
-                            <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— The Curated Collection</span>
+                            <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('home.featured.badge')}</span>
                             <h2 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">
-                                Elite <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Residences</span>
+                                Elite <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'المساكن' : 'Residences'}</span>
                             </h2>
                         </div>
                         <Link to="/properties" className="btn-elite bg-transparent border border-domixa-dark/10 text-domixa-dark hover:bg-domixa-dark hover:text-white rounded-full flex items-center group">
-                            <span>Explore All</span>
+                            <span>{t('home.featured.explore')}</span>
                             <ArrowRight size={16} className="ml-2 rtl:mr-2 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
                         </Link>
                     </div>
@@ -74,11 +74,11 @@ const Home = () => {
                                     <div className="flex items-center space-x-6 rtl:space-x-reverse pt-2 text-gray-400">
                                         <div className="flex items-center space-x-2">
                                             <BedDouble size={16} className="text-gray-300" />
-                                            <span className="text-[10px] font-bold uppercase tracking-widest">{property.beds} Beds</span>
+                                            <span className="text-[10px] font-bold uppercase tracking-widest">{property.beds} {t('common.beds')}</span>
                                         </div>
                                         <div className="flex items-center space-x-2">
                                             <Maximize size={16} className="text-gray-300" />
-                                            <span className="text-[10px] font-bold uppercase tracking-widest">{property.area} m²</span>
+                                            <span className="text-[10px] font-bold uppercase tracking-widest">{property.area} {t('common.sqm')}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -102,26 +102,26 @@ const Home = () => {
                         </div>
                         <div className="absolute -bottom-10 -right-10 rtl:-left-10 rtl:-right-auto w-48 h-48 bg-domixa-gold flex flex-col items-center justify-center rounded-3xl shadow-2xl animate-float">
                             <p className="text-white text-5xl font-black">20</p>
-                            <p className="text-white/70 text-[10px] uppercase font-bold tracking-widest">Years of Excellence</p>
+                            <p className="text-white/70 text-[10px] uppercase font-bold tracking-widest">{t('home.about.stat_label')}</p>
                         </div>
                     </div>
                     <div className="order-1 lg:order-2 space-y-10">
-                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px]">— Our Vision</span>
-                        <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-tight">Crafting Iconic <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Destinations.</span></h2>
+                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px]">— {t('home.about.badge')}</span>
+                        <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-tight">{i18n.language === 'ar' ? 'صنع وجهات' : 'Crafting Iconic'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'أيقونية.' : 'Destinations.'}</span></h2>
                         <p className="text-white/50 text-xl leading-relaxed font-light italic">
-                            "At Domixa, we don't just develop properties. We engineer legacies that stand the test of time, blending futuristic luxury with the soul of the UAE."
+                            "{t('home.about.description')}"
                         </p>
                         <div className="grid grid-cols-2 gap-12 pt-8">
                             <div>
-                                <p className="text-white font-bold text-lg mb-2">Global Reach</p>
-                                <p className="text-white/40 text-sm">Investments across 4 major UAE hubs and international markets.</p>
+                                <p className="text-white font-bold text-lg mb-2">{t('home.about.global_title')}</p>
+                                <p className="text-white/40 text-sm">{t('home.about.global_desc')}</p>
                             </div>
                             <div>
-                                <p className="text-white font-bold text-lg mb-2">Elite Service</p>
-                                <p className="text-white/40 text-sm">Personalized advisory for high-net-worth portfolio management.</p>
+                                <p className="text-white font-bold text-lg mb-2">{t('home.about.elite_title')}</p>
+                                <p className="text-white/40 text-sm">{t('home.about.elite_desc')}</p>
                             </div>
                         </div>
-                        <button className="btn-elite bg-domixa-gold text-domixa-dark rounded-full hover:bg-white transition-all">Discover Domixa</button>
+                        <button className="btn-elite bg-domixa-gold text-domixa-dark rounded-full hover:bg-white transition-all">{t('home.about.cta')}</button>
                     </div>
                 </div>
             </section>
@@ -129,11 +129,11 @@ const Home = () => {
             {/* CTA - Statement Section */}
             <section className="section-premium text-center">
                 <div className="max-w-4xl mx-auto space-y-12">
-                    <h2 className="text-4xl md:text-7xl font-serif text-domixa-dark italic">Begin Your <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Journey</span></h2>
-                    <p className="text-gray-400 text-xl font-light">Join the ranks of elite investors across the world's most dynamic real estate market.</p>
+                    <h2 className="text-4xl md:text-7xl font-serif text-domixa-dark italic">{i18n.language === 'ar' ? 'ابدأ' : 'Begin Your'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'رحلتك' : 'Journey'}</span></h2>
+                    <p className="text-gray-400 text-xl font-light">{t('home.cta.description')}</p>
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-                        <Link to="/contact" className="btn-elite rounded-full px-16">Contact Private Sales</Link>
-                        <Link to="/properties" className="text-domixa-dark font-black uppercase text-xs tracking-widest hover:text-domixa-gold transition-colors">View All Residencies</Link>
+                        <Link to="/contact" className="btn-elite rounded-full px-16">{t('home.cta.contact')}</Link>
+                        <Link to="/properties" className="text-domixa-dark font-black uppercase text-xs tracking-widest hover:text-domixa-gold transition-colors">{t('home.cta.view_all')}</Link>
                     </div>
                 </div>
             </section>

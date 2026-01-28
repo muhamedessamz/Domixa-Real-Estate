@@ -91,7 +91,7 @@ const Navbar = () => {
                         </Link>
                     ))}
                     <div className="pt-12 flex flex-col items-center space-y-4">
-                        <button onClick={toggleLanguage} className="text-domixa-gold text-lg font-black uppercase tracking-widest">{i18n.language === 'en' ? 'Arabic' : 'English'}</button>
+                        <button onClick={toggleLanguage} className="text-domixa-gold text-lg font-black uppercase tracking-widest">{i18n.language === 'en' ? t('nav.toggle.ar') : t('nav.toggle.en')}</button>
                         <div className="text-white/30 text-xs tracking-widest">+971 4 000 0000</div>
                     </div>
                 </div>

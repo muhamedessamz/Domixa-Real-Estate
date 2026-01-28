@@ -25,15 +25,15 @@ const Properties = () => {
                 {/* Editorial Header */}
                 <div className="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
                     <div className="max-w-3xl">
-                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— Property Catalog</span>
-                        <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">Global <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Inventory</span></h1>
+                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('properties.header.badge')}</span>
+                        <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">{i18n.language === 'ar' ? 'مخزون' : 'Global'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'عالمي' : 'Inventory'}</span></h1>
                         <p className="mt-8 text-gray-400 text-xl font-light italic leading-relaxed">
-                            Refined search for the world's most desired addresses. Filter by city, lifestyle, or investment yield.
+                            {t('properties.header.desc')}
                         </p>
                     </div>
                     <div className="flex items-center space-x-4 rtl:space-x-reverse text-domixa-dark/30 font-black text-xs uppercase tracking-widest">
-                        <span>Sort By:</span>
-                        <button className="text-domixa-dark border-b border-domixa-gold underline-offset-4">Premium First</button>
+                        <span>{t('properties.header.sort')}</span>
+                        <button className="text-domixa-dark border-b border-domixa-gold underline-offset-4">{t('properties.header.sort_opt')}</button>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@ const Properties = () => {
                         <Search className="absolute left-6 rtl:right-6 top-1/2 -translate-y-1/2 text-gray-300 group-hover:text-domixa-gold transition-colors" size={20} />
                         <input
                             type="text"
-                            placeholder="Search by neighborhood or development..."
+                            placeholder={t('properties.search.placeholder')}
                             className="w-full pl-16 pr-6 rtl:pr-16 rtl:pl-6 py-5 bg-gray-50/50 rounded-2xl border-none focus:ring-1 focus:ring-domixa-gold/30 outline-none text-sm transition-all font-medium"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
@@ -51,13 +51,19 @@ const Properties = () => {
                     </div>
 
                     <div className="flex items-center space-x-3 rtl:space-x-reverse w-full lg:w-auto overflow-x-auto py-2 lg:py-0 scrollbar-hide">
-                        {cities.map(city => (
+                        {[
+                            { key: 'All', label: t('properties.cities.all') },
+                            { key: 'Dubai', label: t('properties.cities.dubai') },
+                            { key: 'Abu Dhabi', label: t('properties.cities.abu_dhabi') },
+                            { key: 'Sharjah', label: t('properties.cities.sharjah') },
+                            { key: 'Ajman', label: t('properties.cities.ajman') }
+                        ].map(city => (
                             <button
-                                key={city}
-                                onClick={() => setFilterCity(city)}
-                                className={`px-8 py-4 rounded-2xl text-[10px] uppercase font-black tracking-widest whitespace-nowrap transition-all duration-500 ${filterCity === city ? 'bg-domixa-dark text-white shadow-xl' : 'bg-white text-gray-400 hover:text-domixa-dark border border-gray-100'}`}
+                                key={city.key}
+                                onClick={() => setFilterCity(city.key)}
+                                className={`px-8 py-4 rounded-2xl text-[10px] uppercase font-black tracking-widest whitespace-nowrap transition-all duration-500 ${filterCity === city.key ? 'bg-domixa-dark text-white shadow-xl' : 'bg-white text-gray-400 hover:text-domixa-dark border border-gray-100'}`}
                             >
-                                {city}
+                                {city.label}
                             </button>
                         ))}
                     </div>
@@ -100,7 +106,7 @@ const Properties = () => {
                                     <div className="flex justify-between items-center pt-6 pb-2 border-t border-gray-100 text-gray-400">
                                         <div className="flex items-center space-x-2">
                                             <BedDouble size={16} className="text-gray-300" />
-                                            <span className="text-[10px] font-bold uppercase tracking-widest text-domixa-dark">{property.beds} Beds</span>
+                                            <span className="text-[10px] font-bold uppercase tracking-widest text-domixa-dark">{property.beds} {t('common.beds')}</span>
                                         </div>
                                         <p className="text-xl font-serif font-black italic text-domixa-dark">AED {property.price}</p>
                                     </div>

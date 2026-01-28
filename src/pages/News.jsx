@@ -14,7 +14,7 @@ const News = () => {
                 <div className="max-w-[1400px] mx-auto px-6 md:px-12">
                     <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('news.subtitle')}</span>
                     <h1 className="text-6xl md:text-9xl font-serif text-domixa-dark italic leading-[0.8] mb-20">
-                        The Real Estate <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Dispatch.</span>
+                        {i18n.language === 'ar' ? 'المنصة' : 'The Real Estate'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'الإخبارية.' : 'Dispatch.'}</span>
                     </h1>
 
                     {/* Featured Story */}
@@ -29,16 +29,16 @@ const News = () => {
                         <div className="p-12 lg:p-20 space-y-8">
                             <div className="flex items-center space-x-4 rtl:space-x-reverse text-domixa-gold text-[10px] font-black uppercase tracking-widest">
                                 <Tag size={14} />
-                                <span>{news[0].category[i18n.language]}</span>
+                                <span>{t('news.featured.badge')} — {news[0].category[i18n.language]}</span>
                             </div>
                             <h2 className="text-4xl md:text-5xl font-serif font-black text-domixa-dark leading-tight italic">
                                 {news[0].title[i18n.language]}
                             </h2>
                             <p className="text-gray-400 text-lg font-light italic leading-relaxed">
-                                Our latest quarterly analysis reveals unprecedented growth in high-yield assets across the UAE.
+                                {t('news.featured.description')}
                             </p>
                             <div className="flex items-center space-x-6 rtl:space-x-reverse pt-8">
-                                <button className="btn-elite rounded-full px-12">Read Full Story</button>
+                                <button className="btn-elite rounded-full px-12">{t('news.featured.cta')}</button>
                                 <span className="text-gray-300 text-xs font-bold uppercase tracking-widest flex items-center">
                                     <Calendar size={14} className="mr-2 rtl:ml-2" />
                                     {news[0].date}
@@ -54,8 +54,8 @@ const News = () => {
                 <div className="max-w-[1400px] mx-auto">
                     <div className="flex justify-between items-end mb-24">
                         <div>
-                            <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('news.latest')}</span>
-                            <h2 className="text-5xl font-serif text-domixa-dark italic">Recent <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Updates.</span></h2>
+                            <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('news.latest_title')}</span>
+                            <h2 className="text-5xl font-serif text-domixa-dark italic">{i18n.language === 'ar' ? 'آخر' : 'Recent'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'المستجدات.' : 'Updates.'}</span></h2>
                         </div>
                     </div>
 
@@ -95,11 +95,11 @@ const News = () => {
             <section className="section-premium bg-domixa-dark text-center overflow-hidden relative">
                 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-domixa-gold/10 via-transparent to-transparent"></div>
                 <div className="max-w-3xl mx-auto relative z-10 space-y-12">
-                    <h2 className="text-4xl md:text-6xl font-serif text-white italic leading-tight">Elite <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Subscription.</span></h2>
-                    <p className="text-white/40 text-xl font-light italic">Receive exclusive market insights and early property notifications directly to your inbox.</p>
+                    <h2 className="text-4xl md:text-6xl font-serif text-white italic leading-tight">{i18n.language === 'ar' ? 'اشتراك' : 'Elite'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'النخبة.' : 'Subscription.'}</span></h2>
+                    <p className="text-white/40 text-xl font-light italic">{t('news.newsletter.description')}</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <input type="email" placeholder="Email Address" className="bg-white/5 border border-white/10 rounded-full px-8 py-4 text-white focus:outline-none focus:border-domixa-gold transition-all min-w-[300px]" />
-                        <button className="btn-elite bg-domixa-gold text-domixa-dark rounded-full hover:bg-white transition-all">Join Circle</button>
+                        <input type="email" placeholder={t('news.newsletter.placeholder')} className="bg-white/5 border border-white/10 rounded-full px-8 py-4 text-white focus:outline-none focus:border-domixa-gold transition-all min-w-[300px]" />
+                        <button className="btn-elite bg-domixa-gold text-domixa-dark rounded-full hover:bg-white transition-all">{t('news.newsletter.cta')}</button>
                     </div>
                 </div>
             </section>

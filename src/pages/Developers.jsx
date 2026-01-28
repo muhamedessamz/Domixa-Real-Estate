@@ -23,7 +23,7 @@ const Developers = () => {
                     >
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('developers.subtitle')}</span>
                         <h1 className="text-6xl md:text-9xl font-serif text-white italic leading-[0.8] mb-12">
-                            Architectural <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Alliances.</span>
+                            {i18n.language === 'ar' ? 'تحالفات' : 'Architectural'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'معمارية.' : 'Alliances.'}</span>
                         </h1>
                         <p className="text-white/40 text-2xl font-light italic leading-relaxed max-w-2xl">
                             "{t('developers.description')}"
@@ -57,9 +57,9 @@ const Developers = () => {
                 <div className="max-w-[1400px] mx-auto px-6 md:px-12">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
                         {[
-                            { icon: Building2, title: "Infrastructure", desc: "Collaborating on Tier-1 infrastructure developments." },
-                            { icon: Handshake, title: "Joint Ventures", desc: "Strategic co-investments in emerging luxury markets." },
-                            { icon: Globe2, title: "Global Standards", desc: "Importing international expertise to UAE real estate." }
+                            { icon: Building2, title: t('developers.philosophy.infra'), desc: t('developers.philosophy.infra_desc') },
+                            { icon: Handshake, title: t('developers.philosophy.jv'), desc: t('developers.philosophy.jv_desc') },
+                            { icon: Globe2, title: t('developers.philosophy.global'), desc: t('developers.philosophy.global_desc') }
                         ].map((item, i) => (
                             <div key={i} className="text-center space-y-8">
                                 <div className="w-20 h-20 bg-white shadow-xl rounded-[2rem] mx-auto flex items-center justify-center text-domixa-gold group-hover:bg-domixa-dark group-hover:text-white transition-all">

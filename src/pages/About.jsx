@@ -17,21 +17,21 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
                     >
-                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— Established 2005</span>
+                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('about.hero.badge')}</span>
                         <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic mb-12 leading-none">
-                            A Legacy of <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Excellence.</span>
+                            {i18n.language === 'ar' ? 'إرث من' : 'A Legacy of'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'التميز.' : 'Excellence.'}</span>
                         </h1>
                         <p className="text-gray-500 text-xl font-light italic leading-relaxed mb-12">
-                            For over two decades, Domixa has been the architect of luxury and the catalyst for strategic growth in the United Arab Emirates. We don't just build; we redefine skylines.
+                            {t('about.hero.description')}
                         </p>
                         <div className="flex space-x-16 rtl:space-x-reverse">
                             <div>
                                 <p className="text-5xl font-black text-domixa-gold underline decoration-domixa-gold/30 underline-offset-8">25+</p>
-                                <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest mt-4">Global Awards</p>
+                                <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest mt-4">{t('about.hero.stats.awards')}</p>
                             </div>
                             <div>
-                                <p className="text-5xl font-black text-domixa-gold underline decoration-domixa-gold/30 underline-offset-8">12B+</p>
-                                <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest mt-4">Assets Managed</p>
+                                <p className="text-5_xl font-black text-domixa-gold underline decoration-domixa-gold/30 underline-offset-8">12B+</p>
+                                <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest mt-4">{t('about.hero.stats.assets')}</p>
                             </div>
                         </div>
                     </motion.div>
@@ -46,7 +46,7 @@ const About = () => {
                         </div>
                         <div className="absolute -bottom-10 -left-10 rtl:-right-10 rtl:-left-auto bg-domixa-dark text-white p-12 rounded-[2.5rem] shadow-2xl hidden md:flex flex-col space-y-4 max-w-sm animate-float">
                             <Quote size={32} className="text-domixa-gold opacity-50" />
-                            <p className="text-lg font-serif italic text-white/80">"Architecture should speak of its time and place, but yearn for timelessness."</p>
+                            <p className="text-lg font-serif italic text-white/80">"{t('about.hero.quote')}"</p>
                             <div className="h-px w-12 bg-domixa-gold mt-4"></div>
                         </div>
                     </div>
@@ -60,13 +60,13 @@ const About = () => {
                         {[
                             {
                                 icon: Target,
-                                title: "Strategic Vision",
-                                desc: "Pioneering sustainable and futuristic urban landscapes that anticipate the needs of tomorrow's global citizens."
+                                title: t('about.philosophy.vision_title'),
+                                desc: t('about.philosophy.vision_desc')
                             },
                             {
                                 icon: Landmark,
-                                title: "Institutional Trust",
-                                desc: "A foundation built on transparency, legal excellence, and unwavering commitment to our investors' dividends."
+                                title: t('about.philosophy.trust_title'),
+                                desc: t('about.philosophy.trust_desc')
                             }
                         ].map((item, i) => (
                             <div key={i} className="flex flex-col space-y-6 group">
@@ -87,8 +87,8 @@ const About = () => {
             <section className="py-40">
                 <div className="max-w-[1400px] mx-auto px-6 md:px-12">
                     <div className="text-center mb-32">
-                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— Leadership</span>
-                        <h2 className="text-6xl font-serif text-domixa-dark italic">The Global <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Council</span></h2>
+                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('about.leadership.badge')}</span>
+                        <h2 className="text-6xl font-serif text-domixa-dark italic">{i18n.language === 'ar' ? 'المجلس' : 'The Global'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'العالمي' : 'Council'}</span></h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
