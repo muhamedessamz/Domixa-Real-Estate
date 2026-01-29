@@ -73,7 +73,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Mobile UI */}
-                    <div className="lg:hidden flex items-center space-x-6 rtl:space-x-reverse">
+                    <div className="lg:hidden flex items-center gap-6">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className={`p-2 transition-colors ${useDarkText ? 'text-domixa-dark' : 'text-white'}`}

@@ -1,7 +1,7 @@
 export const properties = [
   {
     id: 10,
-    title: { en: "The Sovereign Bay Estate", ar: "عزبة سيفرين باي" },
+    title: { en: "The Sovereign Bay Estate", ar: "خليج سيفرين باي" },
     price: "28,500,000",
     location: { en: "Palm Jumeirah, Dubai", ar: "نخلة جميرا، دبي" },
     city: "Dubai",
@@ -124,7 +124,7 @@ export const properties = [
 export const projects = [
   {
     id: 11,
-    name: { en: "The Sovereign Bay Estate", ar: "عزبة سيفرين باي" },
+    name: { en: "The Sovereign Bay Estate", ar: "خليج سيفرين باي" },
     status: { en: "Foundation Stage", ar: "مرحلة الأساسات" },
     location: { en: "Palm Jumeirah, Dubai", ar: "نخلة جميرا، دبي" },
     image: "https://houseofabhinandanlodha.in/projects/sovereign_bay/images/sovereign-bay-goa-04.webp"
@@ -134,7 +134,7 @@ export const projects = [
     name: { en: "The Domixa Heights", ar: "دوميكسا هايتس" },
     status: { en: "Ongoing", ar: "قيد الإنشاء" },
     location: { en: "Business Bay, Dubai", ar: "خليج الأعمال، دبي" },
-    image: "https://images.unsplash.com/photo-1541339907198-e08756edd81f?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.ctfassets.net/zoq5l15g49wj/2GOzI0AOKnmcwhKs2K2f8y/1eed0d33e257cc53b7fb355275223ed1/Canal_Heights-Gallery-00.jpg"
   },
   {
     id: 2,
@@ -155,14 +155,14 @@ export const projects = [
     name: { en: "The Grand Canal District", ar: "منطقة القناة الكبرى" },
     status: { en: "Launching Soon", ar: "الإطلاق قريباً" },
     location: { en: "Dubai Creek Harbor, Dubai", ar: "خور دبي، دبي" },
-    image: "https://images.unsplash.com/photo-1512453979798-5eaad0ff3e0b?auto=format&fit=crop&w=800&q=80"
+    image: "https://thumbs.dreamstime.com/b/macau-january-tourist-touring-around-grand-canal-shoppes-area-largest-indoor-shopping-mall-located-venetian-luxury-hotel-104903081.jpg"
   },
   {
     id: 5,
     name: { en: "Heritage Square", ar: "ساحة التراث" },
     status: { en: "Steady Progress", ar: "تقدم مستمر" },
     location: { en: "Old Sharjah, Sharjah", ar: "الشارقة القديمة، الشارقة" },
-    image: "https://images.unsplash.com/photo-1551133990-79965da49742?auto=format&fit=crop&w=800&q=80"
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/62/12/cb/heritage-square-museum.jpg?w=900&h=500&s=1"
   },
   {
     id: 6,

@@ -63,8 +63,8 @@ const Home = () => {
 
                                 {/* Content matched to screenshot */}
                                 <div className="px-4 space-y-3">
-                                    <div className="flex items-center text-domixa-gold text-[10px] font-black uppercase tracking-[0.2em]">
-                                        <MapPin size={14} className="mr-2 rtl:ml-2" />
+                                    <div className="flex items-center text-domixa-gold text-[10px] font-black uppercase tracking-[0.2em] gap-2">
+                                        <MapPin size={14} />
                                         <span>{property.location[i18n.language]}</span>
                                     </div>
                                     <h3 className="text-3xl md:text-4xl font-serif font-black text-domixa-dark leading-tight group-hover:text-domixa-gold transition-colors">
@@ -115,7 +115,7 @@ const Home = () => {
                                     <stat.icon size={28} />
                                 </div>
                                 <p className="text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-4">{stat.label}</p>
-                                <div className="flex items-center justify-center space-x-3 rtl:space-x-reverse">
+                                <div className="flex items-center justify-center gap-3">
                                     <p className="text-4xl font-black text-domixa-dark tracking-tighter">{stat.value}</p>
                                     <span className="text-[10px] font-black text-green-500 bg-green-50 px-2 py-1 rounded-lg">{stat.trend}</span>
                                 </div>
@@ -204,7 +204,7 @@ const Home = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.3 + (i * 0.1) }}
-                                    className="flex flex-col items-center space-y-6"
+                                    className="flex flex-col items-center gap-6"
                                 >
                                     <div className="w-12 h-12 rounded-full border border-domixa-gold/30 flex items-center justify-center">
                                         <item.icon size={20} className="text-domixa-gold" />

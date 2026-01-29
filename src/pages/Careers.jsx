@@ -35,23 +35,23 @@ const Careers = () => {
                     <h2 className="text-3xl font-black text-domixa-dark italic mb-10">Open Positions</h2>
                     {careers.map((job) => (
                         <div key={job.id} className="group bg-white border border-gray-100 p-8 rounded-3xl flex flex-col md:flex-row justify-between items-center hover:shadow-2xl transition-all duration-500 hover:border-domixa-gold">
-                            <div className="flex items-center space-x-6 rtl:space-x-reverse mb-4 md:mb-0">
+                            <div className="flex items-center gap-6 mb-4 md:mb-0">
                                 <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center text-domixa-gold group-hover:bg-domixa-gold group-hover:text-white transition-all">
                                     <Briefcase size={24} />
                                 </div>
                                 <div>
                                     <h4 className="text-xl font-bold text-domixa-dark">{job.title[i18n.language]}</h4>
-                                    <div className="flex items-center space-x-3 rtl:space-x-reverse text-gray-400 text-sm mt-1">
+                                    <div className="flex items-center gap-3 text-gray-400 text-sm mt-1">
                                         <span className="font-bold text-domixa-gold uppercase tracking-tighter">{job.department}</span>
                                         <span>•</span>
-                                        <div className="flex items-center">
-                                            <MapPin size={14} className="mr-1 rtl:ml-1" />
+                                        <div className="flex items-center gap-1">
+                                            <MapPin size={14} />
                                             <span>{job.location}</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <button className="flex items-center space-x-3 rtl:space-x-reverse text-domixa-dark font-black uppercase tracking-widest text-xs group-hover:text-domixa-gold transition-colors">
+                            <button className="flex items-center gap-3 text-domixa-dark font-black uppercase tracking-widest text-xs group-hover:text-domixa-gold transition-colors">
                                 <span>Apply Now</span>
                                 <ArrowRight size={18} className="group-hover:translate-x-2 rtl:group-hover:-translate-x-2 transition-transform" />
                             </button>

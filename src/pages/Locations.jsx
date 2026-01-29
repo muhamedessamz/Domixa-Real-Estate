@@ -71,7 +71,7 @@ const Locations = () => {
 
                                 <p className="text-white/60 text-sm italic leading-relaxed max-w-xs">{city.desc}</p>
 
-                                <div className="pt-8 flex items-center space-x-6 rtl:space-x-reverse opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100 translate-y-8 group-hover:translate-y-0">
+                                <div className="pt-8 flex items-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100 translate-y-8 group-hover:translate-y-0">
                                     <div className="flex flex-col">
                                         <span className="text-[10px] font-black uppercase tracking-[0.2em] text-white/30">Developments</span>
                                         <span className="text-2xl font-bold font-serif text-domixa-gold">{city.projects}+</span>

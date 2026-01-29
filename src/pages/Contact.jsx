@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, Phone, MapPin, Linkedin, Instagram, ArrowUpRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Linkedin, Instagram, ArrowUpRight, ChevronDown, ArrowRight, Twitter, Facebook } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Contact = () => {
     const { t, i18n } = useTranslation();
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [interest, setInterest] = useState(t('contact.form.options.off_plan'));
+
+    const options = [
+        t('contact.form.options.off_plan'),
+        t('contact.form.options.secondary'),
+        t('contact.form.options.institutional'),
+        t('contact.form.options.commercial')
+    ];
 
     return (
         <div className="pt-40 pb-32 bg-domixa-gray min-h-screen">
@@ -92,14 +101,47 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            <div className="group border-b border-gray-100 pb-4 focus-within:border-domixa-gold transition-all">
+                            {/* Custom Dropdown Portfolio Interest */}
+                            <div className="relative">
                                 <label className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-300 block mb-4">{t('contact.form.interest')}</label>
-                                <select className="w-full bg-transparent border-none outline-none text-domixa-dark font-medium appearance-none cursor-pointer">
-                                    <option>{t('contact.form.options.off_plan')}</option>
-                                    <option>{t('contact.form.options.secondary')}</option>
-                                    <option>{t('contact.form.options.institutional')}</option>
-                                    <option>{t('contact.form.options.commercial')}</option>
-                                </select>
+                                <div
+                                    className="group border-b border-gray-100 pb-4 cursor-pointer flex justify-between items-center hover:border-domixa-gold transition-all"
+                                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                                >
+                                    <span className="text-domixa-dark font-medium">{interest}</span>
+                                    <ChevronDown
+                                        size={16}
+                                        className={`text-gray-300 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                                    />
+                                </div>
+
+                                <AnimatePresence>
+                                    {isDropdownOpen && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: 10 }}
+                                            className="absolute z-20 top-full left-0 w-full bg-white shadow-2xl rounded-2xl mt-4 overflow-hidden border border-gray-100"
+                                        >
+                                            {options.map((opt, i) => (
+                                                <div
+                                                    key={i}
+                                                    onClick={() => {
+                                                        setInterest(opt);
+                                                        setIsDropdownOpen(false);
+                                                    }}
+                                                    className="p-6 hover:bg-domixa-gray cursor-pointer flex justify-between items-center group/opt border-b border-gray-50 last:border-none transition-colors"
+                                                >
+                                                    <span className={`text-sm tracking-tight ${interest === opt ? 'text-domixa-gold font-bold' : 'text-domixa-dark font-medium'}`}>{opt}</span>
+                                                    <ArrowRight
+                                                        size={14}
+                                                        className={`text-domixa-gold opacity-0 -translate-x-4 group-hover/opt:opacity-100 group-hover/opt:translate-x-0 transition-all rtl:rotate-180 rtl:group-hover/opt:-translate-x-0`}
+                                                    />
+                                                </div>
+                                            ))}
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
 
                             <div className="group border-b border-gray-100 pb-4 focus-within:border-domixa-gold transition-all">
@@ -113,6 +155,14 @@ const Contact = () => {
                                     <ArrowUpRight size={18} />
                                 </button>
                                 <p className="text-center text-[10px] font-bold text-gray-300 tracking-widest mt-8 uppercase">{t('contact.form.confidential')}</p>
+
+                                {/* Social Media Integration */}
+                                <div className="mt-12 pt-8 border-t border-gray-50 flex justify-center gap-8">
+                                    <a href="#" className="text-gray-300 hover:text-domixa-gold transition-colors"><Facebook size={20} /></a>
+                                    <a href="#" className="text-gray-300 hover:text-domixa-gold transition-colors"><Twitter size={20} /></a>
+                                    <a href="#" className="text-gray-300 hover:text-domixa-gold transition-colors"><Instagram size={20} /></a>
+                                    <a href="#" className="text-gray-300 hover:text-domixa-gold transition-colors"><Linkedin size={20} /></a>
+                                </div>
                             </div>
                         </form>
                     </div>

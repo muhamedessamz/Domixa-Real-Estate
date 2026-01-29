@@ -27,7 +27,7 @@ const News = () => {
                             <img src={news[0].image} alt="" className="w-full h-full object-cover" />
                         </div>
                         <div className="p-12 lg:p-20 space-y-8">
-                            <div className="flex items-center space-x-4 rtl:space-x-reverse text-domixa-gold text-[10px] font-black uppercase tracking-widest">
+                            <div className="flex items-center gap-4 text-domixa-gold text-[10px] font-black uppercase tracking-widest">
                                 <Tag size={14} />
                                 <span>{t('news.featured.badge')} — {news[0].category[i18n.language]}</span>
                             </div>
@@ -37,10 +37,10 @@ const News = () => {
                             <p className="text-gray-400 text-lg font-light italic leading-relaxed">
                                 {t('news.featured.description')}
                             </p>
-                            <div className="flex items-center space-x-6 rtl:space-x-reverse pt-8">
+                            <div className="flex items-center gap-6 pt-8">
                                 <button className="btn-elite rounded-full px-12">{t('news.featured.cta')}</button>
-                                <span className="text-gray-300 text-xs font-bold uppercase tracking-widest flex items-center">
-                                    <Calendar size={14} className="mr-2 rtl:ml-2" />
+                                <span className="text-gray-300 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+                                    <Calendar size={14} />
                                     {news[0].date}
                                 </span>
                             </div>
@@ -72,7 +72,7 @@ const News = () => {
                                 <div className="aspect-square rounded-[3rem] overflow-hidden shadow-xl mb-8 relative">
                                     <img src={item.image} alt="" className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" />
                                     <div className="absolute inset-0 bg-domixa-dark/20 group-hover:bg-transparent transition-colors"></div>
-                                    <div className="absolute bottom-6 left-6 rtl:right-6 rtl:left-auto flex items-center space-x-3 rtl:space-x-reverse">
+                                    <div className="absolute bottom-6 left-6 rtl:right-6 rtl:left-auto flex items-center gap-3">
                                         <span className="bg-white/95 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-domixa-dark shadow-sm">
                                             {item.category[i18n.language]}
                                         </span>

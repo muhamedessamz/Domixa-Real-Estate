@@ -61,7 +61,7 @@ const PropertyDetails = () => {
                             <h1 className="text-64 md:text-8xl lg:text-9xl font-serif text-white italic leading-[0.8] mb-8">
                                 {property.title[i18n.language]}
                             </h1>
-                            <div className="flex items-center space-x-6 rtl:space-x-reverse text-white/50 text-xl font-light italic">
+                            <div className="flex items-center gap-6 text-white/50 text-xl font-light italic">
                                 <MapPin className="text-domixa-gold" />
                                 <span>{property.location[i18n.language]}</span>
                             </div>
@@ -80,7 +80,7 @@ const PropertyDetails = () => {
             <nav className={`w-full z-40 transition-all duration-500 border-b border-gray-100 ${isNavSticky ? 'fixed top-0 bg-white/95 backdrop-blur-xl shadow-xl' : 'relative bg-white'}`}>
                 <div className="max-w-[1400px] mx-auto px-6 md:px-12">
                     <div className="flex justify-between items-center h-20">
-                        <div className="hidden md:flex space-x-12 rtl:space-x-reverse items-center h-full">
+                        <div className="hidden md:flex gap-12 items-center h-full">
                             {['overview', 'floorplans', 'features', 'location', 'enquire'].map((tab) => (
                                 <a
                                     key={tab}
@@ -92,8 +92,8 @@ const PropertyDetails = () => {
                                 </a>
                             ))}
                         </div>
-                        <div className="flex items-center space-x-6 rtl:space-x-reverse">
-                            <button className="flex items-center space-x-3 rtl:space-x-reverse text-domixa-dark font-black text-[10px] uppercase tracking-widest hover:text-domixa-gold transition-colors">
+                        <div className="flex items-center gap-6">
+                            <button className="flex items-center gap-3 text-domixa-dark font-black text-[10px] uppercase tracking-widest hover:text-domixa-gold transition-colors">
                                 <Download size={16} />
                                 <span>Brochure</span>
                             </button>
@@ -213,7 +213,7 @@ const PropertyDetails = () => {
                                 </div>
                             ))}
                         </div>
-                        <button className="btn-elite rounded-2xl flex items-center space-x-4 rtl:space-x-reverse">
+                        <button className="btn-elite rounded-2xl flex items-center gap-4">
                             <MapIcon size={18} />
                             <span>Open Interactive Map</span>
                         </button>

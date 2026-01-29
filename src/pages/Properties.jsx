@@ -31,7 +31,7 @@ const Properties = () => {
                             {t('properties.header.desc')}
                         </p>
                     </div>
-                    <div className="flex items-center space-x-4 rtl:space-x-reverse text-domixa-dark/30 font-black text-xs uppercase tracking-widest">
+                    <div className="flex items-center gap-4 text-domixa-dark/30 font-black text-xs uppercase tracking-widest">
                         <span>{t('properties.header.sort')}</span>
                         <button className="text-domixa-dark border-b border-domixa-gold underline-offset-4">{t('properties.header.sort_opt')}</button>
                     </div>
@@ -50,7 +50,7 @@ const Properties = () => {
                         />
                     </div>
 
-                    <div className="flex items-center space-x-3 rtl:space-x-reverse w-full lg:w-auto overflow-x-auto py-2 lg:py-0 scrollbar-hide">
+                    <div className="flex items-center gap-3 w-full lg:w-auto overflow-x-auto py-2 lg:py-0 scrollbar-hide">
                         {[
                             { key: 'All', label: t('properties.cities.all') },
                             { key: 'Dubai', label: t('properties.cities.dubai') },
@@ -95,8 +95,8 @@ const Properties = () => {
                                 </div>
 
                                 <div className="px-4 space-y-3">
-                                    <div className="flex items-center text-domixa-gold text-[10px] font-black uppercase tracking-[0.2em]">
-                                        <MapPin size={14} className="mr-2 rtl:ml-2" />
+                                    <div className="flex items-center text-domixa-gold text-[10px] font-black uppercase tracking-[0.2em] gap-2">
+                                        <MapPin size={14} />
                                         <span>{property.location[i18n.language]}</span>
                                     </div>
                                     <h3 className="text-3xl font-serif font-black text-domixa-dark leading-tight group-hover:text-domixa-gold transition-colors truncate">
@@ -104,7 +104,7 @@ const Properties = () => {
                                     </h3>
 
                                     <div className="flex justify-between items-center pt-6 pb-2 border-t border-gray-100 text-gray-400">
-                                        <div className="flex items-center space-x-2">
+                                        <div className="flex items-center gap-2">
                                             <BedDouble size={16} className="text-gray-300" />
                                             <span className="text-[10px] font-bold uppercase tracking-widest text-domixa-dark">{property.beds} {t('common.beds')}</span>
                                         </div>
