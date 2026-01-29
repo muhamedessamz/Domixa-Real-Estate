@@ -10,7 +10,14 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     const isHome = location.pathname === '/';
-    const useDarkText = !isHome || isScrolled;
+    const isPropertyDetail = location.pathname.startsWith('/property/');
+    const isInvestors = location.pathname === '/investors';
+    const isDevelopers = location.pathname === '/developers';
+
+    // Pages that have a dark hero and need light text when not scrolled
+    const hasDarkHero = isHome || isPropertyDetail || isInvestors || isDevelopers;
+
+    const useDarkText = !hasDarkHero || isScrolled;
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 20);

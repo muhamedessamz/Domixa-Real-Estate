@@ -11,7 +11,9 @@
 
   --font-sans: "Outfit", system-ui, sans-serif;
   --font-serif: "Playfair Display", serif;
-  --font-arabic: "Noto Sans Arabic", sans-serif;
+  --font-arabic: "Almarai", sans-serif;
+  --font-arabic-title: "Cairo", sans-serif;
+  --arabic-scale: 1.1;
 
   --animate-slow-zoom: slow-zoom 30s infinite alternate linear;
   --animate-float: float 6s ease-in-out infinite;
@@ -53,7 +55,16 @@
 }
 
 [dir="rtl"] {
-  font-family: 'Noto Sans Arabic', sans-serif;
+  font-family: 'Almarai', sans-serif;
+}
+
+[dir="rtl"] .font-serif,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] .font-arabic-title {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
 }
 
 /* Premium Utilities */

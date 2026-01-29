@@ -9,7 +9,7 @@ export const properties = [
     beds: 6,
     baths: 7,
     type: "Villa",
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80"
+    image: "https://houseofabhinandanlodha.in/projects/sovereign_bay/images/sovereign-bay-goa-04.webp"
   },
   {
     id: 1,
@@ -21,7 +21,7 @@ export const properties = [
     beds: 5,
     baths: 6,
     type: "Villa",
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80"
+    image: "https://avatars.housearch.com/get-vertis-journal/4212087/Six-Senses-The-Palm-Dubai-Siganture-Villa-2-investindxb-scaled.jpeg_1685605904105/orig"
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ export const properties = [
     beds: 2,
     baths: 2,
     type: "Apartment",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+    image: "https://framerusercontent.com/images/06v80ZsaeDncnJWCmna4oBy6s5U.jpg?width=1200&height=1069"
   },
   {
     id: 3,
@@ -124,10 +124,10 @@ export const properties = [
 export const projects = [
   {
     id: 11,
-    name: { en: "The Sovereign Bay Mansion", ar: "قصر سيفرين باي" },
+    name: { en: "The Sovereign Bay Estate", ar: "عزبة سيفرين باي" },
     status: { en: "Foundation Stage", ar: "مرحلة الأساسات" },
     location: { en: "Palm Jumeirah, Dubai", ar: "نخلة جميرا، دبي" },
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80"
+    image: "https://houseofabhinandanlodha.in/projects/sovereign_bay/images/sovereign-bay-goa-04.webp"
   },
   {
     id: 1,
@@ -242,8 +242,18 @@ export const developers = [
 ];
 
 export const investorStats = [
-  { label: { en: "Revenue Growth", ar: "نمو الإيرادات" }, value: "+24%", trend: "up" },
-  { label: { en: "Asset Value", ar: "قيمة الأصول" }, value: "AED 12.4B", trend: "up" },
-  { label: { en: "Dividend Yield", ar: "عائد التوزيعات" }, value: "6.8%", trend: "neutral" },
-  { label: { en: "Net Profit", ar: "صافي الربح" }, value: "AED 1.2B", trend: "up" }
+  { label: { en: "Revenue Growth", ar: "نمو الإيرادات" }, value: { en: "+24%", ar: "+24%" }, trend: "up" },
+  {
+    label: { en: "Asset Value", ar: "قيمة الأصول" },
+    value: { en: "12.4B", ar: "12.4 مليار" },
+    unit: { en: "AED", ar: "درهم إماراتي" },
+    trend: "up"
+  },
+  { label: { en: "Dividend Yield", ar: "عائد التوزيعات" }, value: { en: "6.8%", ar: "6.8%" }, trend: "neutral" },
+  {
+    label: { en: "Net Profit", ar: "صافي الربح" },
+    value: { en: "1.2B", ar: "1.2 مليار" },
+    unit: { en: "AED", ar: "درهم إماراتي" },
+    trend: "up"
+  }
 ];

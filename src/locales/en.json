@@ -22,21 +22,31 @@
     "description": "Discover the most exclusive real estate portfolio in the Middle East. Engineered for high-net-worth growth and timeless luxury.",
     "fields": {
       "region": "Region",
+      "region_val": "Downtown Dubai",
       "asset_type": "Asset Type",
-      "price_range": "Price Range"
+      "asset_val": "Penthouse Collection",
+      "price_range": "Price Range",
+      "price_val": "AED 5M - 50M+"
     },
     "search_btn": "Search Portfolio",
     "award": "Awarded Best Luxury Brokerage 2024",
     "sales_vol": "Sales Vol.",
+    "sales_vol_val": "4.2B+",
     "asset_units": "Asset Units",
+    "asset_units_val": "850+",
     "watch_film": "Watch Film",
     "discovery": "Discovery",
-    "follow": "Follow Domixa"
+    "follow": "Follow Domixa",
+    "cta": {
+      "view": "View Properties",
+      "contact": "Contact Sales"
+    }
   },
   "home": {
     "featured": {
       "badge": "The Curated Collection",
-      "title": "Elite Residences",
+      "title_main": "Elite",
+      "title_sub": "Residences",
       "explore": "Explore All"
     },
     "about": {
@@ -109,7 +119,21 @@
     "leadership": {
       "badge": "Leadership",
       "title_main": "The Global",
-      "title_sub": "Council"
+      "title_sub": "Council",
+      "members": [
+        {
+          "name": "Sultan Al Mansouri",
+          "role": "Executive Chairman"
+        },
+        {
+          "name": "Sarah Williams",
+          "role": "Managing Director"
+        },
+        {
+          "name": "Ahmed bin Zayed",
+          "role": "Investment Principal"
+        }
+      ]
     }
   },
   "project": {
@@ -166,6 +190,10 @@
     "subtitle": "Institutional Governance",
     "narrative": "Sustainable wealth through strategic urban development.",
     "performance_title": "Financial Velocity",
+    "hero_title": {
+      "part1": "Institutional",
+      "part2": "Governance."
+    },
     "metrics": {
       "revenue": "Revenue Growth",
       "assets": "Asset Value",
@@ -176,6 +204,7 @@
       "title": "Fiduciary Excellence",
       "risk": "Risk Mitigation",
       "risk_desc": "Rigorous stress-testing of all capital deployments.",
+      "integrity": "Verified Integrity",
       "legal": "Legal Sovereignty",
       "legal_desc": "Adherence to international real estate legislation.",
       "users": "Board Oversight",
@@ -270,6 +299,13 @@
     "read_more": "Read More",
     "beds": "Beds",
     "sqm": "m²",
-    "explore": "Explore"
+    "explore": "Explore",
+    "types": {
+      "apartment": "Apartment",
+      "villa": "Villa",
+      "penthouse": "Penthouse",
+      "studio": "Studio",
+      "maisonette": "Maisonette"
+    }
   }
 }

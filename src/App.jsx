@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
+import ScrollToTop from './components/ScrollToTop';
 
 // Lazy load pages for performance
 const Home = lazy(() => import('./pages/Home'));
@@ -20,6 +21,7 @@ const Developers = lazy(() => import('./pages/Developers'));
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">

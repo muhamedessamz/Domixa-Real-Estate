@@ -20,7 +20,7 @@ const Home = () => {
                         <div className="max-w-2xl">
                             <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('home.featured.badge')}</span>
                             <h2 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">
-                                Elite <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'المساكن' : 'Residences'}</span>
+                                {t('home.featured.title_main')} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('home.featured.title_sub')}</span>
                             </h2>
                         </div>
                         <Link to="/properties" className="btn-elite bg-transparent border border-domixa-dark/10 text-domixa-dark hover:bg-domixa-dark hover:text-white rounded-full flex items-center group">
@@ -51,7 +51,7 @@ const Home = () => {
                                     {/* Premium Badge */}
                                     <div className="absolute top-8 left-8 rtl:right-8 rtl:left-auto">
                                         <span className="bg-white px-5 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-domixa-dark shadow-sm">
-                                            {property.type}
+                                            {t(`common.types.${property.type.toLowerCase()}`)}
                                         </span>
                                     </div>
 
@@ -71,12 +71,12 @@ const Home = () => {
                                         {property.title[i18n.language]}
                                     </h3>
 
-                                    <div className="flex items-center space-x-6 rtl:space-x-reverse pt-2 text-gray-400">
-                                        <div className="flex items-center space-x-2">
+                                    <div className="flex items-center gap-6 pt-2 text-gray-400">
+                                        <div className="flex items-center gap-3">
                                             <BedDouble size={16} className="text-gray-300" />
                                             <span className="text-[10px] font-bold uppercase tracking-widest">{property.beds} {t('common.beds')}</span>
                                         </div>
-                                        <div className="flex items-center space-x-2">
+                                        <div className="flex items-center gap-3">
                                             <Maximize size={16} className="text-gray-300" />
                                             <span className="text-[10px] font-bold uppercase tracking-widest">{property.area} {t('common.sqm')}</span>
                                         </div>

@@ -92,14 +92,18 @@ const About = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-                        {[
-                            { name: "Sultan Al Mansouri", role: "Executive Chairman", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" },
-                            { name: "Sarah Williams", role: "Managing Director", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" },
-                            { name: "Ahmed bin Zayed", role: "Investment Principal", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" }
-                        ].map((member, i) => (
+                        {t('about.leadership.members', { returnObjects: true }).map((member, i) => (
                             <div key={i} className="group flex flex-col items-center text-center">
                                 <div className="relative overflow-hidden rounded-[4rem] aspect-[3/4] mb-8 shadow-2xl w-full">
-                                    <img src={member.img} alt={member.name} className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale group-hover:grayscale-0" />
+                                    <img
+                                        src={[
+                                            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+                                            "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+                                            "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80"
+                                        ][i]}
+                                        alt={member.name}
+                                        className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale group-hover:grayscale-0"
+                                    />
                                     <div className="absolute inset-0 bg-domixa-dark/20 group-hover:bg-transparent transition-colors"></div>
                                 </div>
                                 <h4 className="text-2xl font-serif font-bold text-domixa-dark italic mb-2">{member.name}</h4>
