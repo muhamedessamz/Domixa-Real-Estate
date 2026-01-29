@@ -18,7 +18,7 @@ const Footer = () => {
                         <p className="text-gray-400 text-sm leading-relaxed">
                             {t('footer.brand_desc')}
                         </p>
-                        <div className="flex space-x-4 rtl:space-x-reverse">
+                        <div className="flex gap-4">
                             <a href="#" className="hover:text-domixa-gold transition-colors"><Facebook size={20} /></a>
                             <a href="#" className="hover:text-domixa-gold transition-colors"><Twitter size={20} /></a>
                             <a href="#" className="hover:text-domixa-gold transition-colors"><Instagram size={20} /></a>
@@ -54,15 +54,15 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-semibold mb-6 border-b border-domixa-gold w-fit pb-1">{t('nav.contact')}</h4>
                         <ul className="space-y-4">
-                            <li className="flex items-start space-x-3 rtl:space-x-reverse group">
+                            <li className="flex items-start gap-3 group">
                                 <MapPin size={20} className="text-domixa-gold group-hover:scale-110 transition-transform" />
                                 <span className="text-gray-400 text-sm italic">{t('footer.address')}</span>
                             </li>
-                            <li className="flex items-center space-x-3 rtl:space-x-reverse group">
+                            <li className="flex items-center gap-3 group">
                                 <Phone size={20} className="text-domixa-gold group-hover:scale-110 transition-transform" />
                                 <span className="text-gray-400 text-sm tracking-widest">+971 4 000 0000</span>
                             </li>
-                            <li className="flex items-center space-x-3 rtl:space-x-reverse group">
+                            <li className="flex items-center gap-3 group">
                                 <Mail size={20} className="text-domixa-gold group-hover:scale-110 transition-transform" />
                                 <span className="text-gray-400 text-sm">info@domixa.ae</span>
                             </li>
@@ -72,7 +72,7 @@ const Footer = () => {
 
                 <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-gray-500 text-xs uppercase tracking-widest">
                     <p>{t('footer.copyright')}</p>
-                    <div className="flex space-x-6 rtl:space-x-reverse">
+                    <div className="flex gap-6">
                         <a href="#" className="hover:text-white transition-colors">{t('footer.links.privacy')}</a>
                         <a href="#" className="hover:text-white transition-colors">{t('footer.links.terms')}</a>
                     </div>

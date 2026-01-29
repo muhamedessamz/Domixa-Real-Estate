@@ -19,12 +19,12 @@ const About = () => {
                     >
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('about.hero.badge')}</span>
                         <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic mb-12 leading-none">
-                            {i18n.language === 'ar' ? 'إرث من' : 'A Legacy of'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'التميز.' : 'Excellence.'}</span>
+                            {t('about.hero.title_main')} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('about.hero.title_sub')}</span>
                         </h1>
                         <p className="text-gray-500 text-xl font-light italic leading-relaxed mb-12">
                             {t('about.hero.description')}
                         </p>
-                        <div className="flex space-x-16 rtl:space-x-reverse">
+                        <div className="flex gap-16">
                             <div>
                                 <p className="text-5xl font-black text-domixa-gold underline decoration-domixa-gold/30 underline-offset-8">25+</p>
                                 <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest mt-4">{t('about.hero.stats.awards')}</p>
@@ -88,7 +88,7 @@ const About = () => {
                 <div className="max-w-[1400px] mx-auto px-6 md:px-12">
                     <div className="text-center mb-32">
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('about.leadership.badge')}</span>
-                        <h2 className="text-6xl font-serif text-domixa-dark italic">{i18n.language === 'ar' ? 'المجلس' : 'The Global'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'العالمي' : 'Council'}</span></h2>
+                        <h2 className="text-6xl font-serif text-domixa-dark italic">{t('about.leadership.title_main')} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('about.leadership.title_sub')}</span></h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16">

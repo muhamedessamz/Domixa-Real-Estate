@@ -14,7 +14,7 @@ const Contact = () => {
                 <div className="mb-32 text-center lg:text-left rtl:lg:text-right flex flex-col lg:flex-row justify-between items-end gap-12">
                     <div className="max-w-3xl">
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('contact.hero.badge')}</span>
-                        <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">{i18n.language === 'ar' ? 'تواصل' : 'Global'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'عالمي' : 'Engagement'}</span></h1>
+                        <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">{t('contact.hero.title')}</h1>
                     </div>
                     <p className="text-gray-400 text-xl font-light italic lg:max-w-xs leading-relaxed">
                         {t('contact.hero.desc')}
@@ -27,10 +27,10 @@ const Contact = () => {
                         <div className="bg-domixa-dark text-white p-16 rounded-[4rem] shadow-2xl relative overflow-hidden group">
                             <div className="absolute top-0 right-0 w-80 h-80 bg-domixa-gold/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl group-hover:bg-domixa-gold/20 transition-all duration-1000"></div>
 
-                            <h3 className="text-3xl font-serif font-bold italic text-white mb-12 relative z-10">{t('contact.hq.title')} <br /> <span className="text-domixa-gold not-italic font-black uppercase text-sm tracking-widest">Global HQ</span></h3>
+                            <h3 className="text-3xl font-serif font-bold italic text-white mb-12 relative z-10">{t('contact.hq.title')} <br /> <span className="text-domixa-gold not-italic font-black uppercase text-sm tracking-widest">{i18n.language === 'ar' ? 'المقر العالمي' : 'Global HQ'}</span></h3>
 
                             <div className="space-y-12 relative z-10">
-                                <div className="flex items-start space-x-6 rtl:space-x-reverse">
+                                <div className="flex items-start gap-6 leading-none">
                                     <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-domixa-gold">
                                         <MapPin size={24} />
                                     </div>
@@ -40,7 +40,7 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                <div className="flex items-start space-x-6 rtl:space-x-reverse">
+                                <div className="flex items-start gap-6 leading-none">
                                     <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-domixa-gold">
                                         <Phone size={24} />
                                     </div>
@@ -50,7 +50,7 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                <div className="flex items-start space-x-6 rtl:space-x-reverse">
+                                <div className="flex items-start gap-6 leading-none">
                                     <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-domixa-gold">
                                         <Mail size={24} />
                                     </div>
@@ -61,7 +61,7 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-20 pt-12 border-t border-white/5 flex space-x-8 rtl:space-x-reverse relative z-10">
+                            <div className="mt-20 pt-12 border-t border-white/5 flex gap-8 relative z-10">
                                 <a href="#" className="text-white/30 hover:text-domixa-gold transition-colors"><Linkedin size={24} /></a>
                                 <a href="#" className="text-white/30 hover:text-domixa-gold transition-colors"><Instagram size={24} /></a>
                             </div>
@@ -70,7 +70,7 @@ const Contact = () => {
                         {/* Minimalist Map Marker */}
                         <div className="h-48 bg-white rounded-[3rem] shadow-xl flex items-center justify-center border border-white p-8 relative overflow-hidden group cursor-pointer">
                             <img src="https://images.unsplash.com/photo-1541339907198-e08756edd81f?auto=format&fit=crop&w=600&q=80" className="absolute inset-0 w-full h-full object-cover opacity-10 grayscale group-hover:scale-110 transition-transform duration-[2s]" />
-                            <div className="relative z-10 flex items-center space-x-4">
+                            <div className="relative z-10 flex items-center gap-4">
                                 <div className="w-3 h-3 bg-domixa-gold rounded-full animate-ping"></div>
                                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-domixa-dark">{t('contact.hq.locate')}</span>
                             </div>
@@ -108,7 +108,7 @@ const Contact = () => {
                             </div>
 
                             <div className="pt-8">
-                                <button className="btn-elite w-full rounded-2xl flex items-center justify-center space-x-4 rtl:space-x-reverse">
+                                <button className="btn-elite w-full rounded-2xl flex items-center justify-center gap-4">
                                     <span>{t('contact.form.cta')}</span>
                                     <ArrowUpRight size={18} />
                                 </button>

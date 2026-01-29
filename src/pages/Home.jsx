@@ -93,7 +93,7 @@ const Home = () => {
                 <div className="max-w-[1400px] mx-auto">
                     <div className="text-center mb-24">
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('home.metrics.badge')}</span>
-                        <h2 className="text-5xl md:text-7xl font-serif text-domixa-dark italic">{i18n.language === 'ar' ? 'ذكاء' : 'Market'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'السوق' : 'Intelligence'}</span></h2>
+                        <h2 className="text-5xl md:text-7xl font-serif text-domixa-dark italic">{t('home.metrics.title_main')} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('home.metrics.title_sub')}</span></h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -144,7 +144,7 @@ const Home = () => {
                     </div>
                     <div className="order-1 lg:order-2 space-y-10">
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px]">— {t('home.about.badge')}</span>
-                        <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-tight">{i18n.language === 'ar' ? 'صنع وجهات' : 'Crafting Iconic'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'أيقونية.' : 'Destinations.'}</span></h2>
+                        <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-tight">{t('home.about.title_main')} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('home.about.title_sub')}</span></h2>
                         <p className="text-white/50 text-xl leading-relaxed font-light italic">
                             "{t('home.about.description')}"
                         </p>
@@ -182,8 +182,8 @@ const Home = () => {
                             <div>
                                 <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('home.philosophy.badge')}</span>
                                 <h2 className="text-6xl md:text-8xl font-serif text-white italic leading-none mb-6">
-                                    {i18n.language === 'ar' ? 'السيادة' : 'Architectural'} <br />
-                                    <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter block mt-2">{i18n.language === 'ar' ? 'المعمارية.' : 'Sovereignty.'}</span>
+                                    {t('home.philosophy.title_main')} <br />
+                                    <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter block mt-2">{t('home.philosophy.title_sub')}</span>
                                 </h2>
                             </div>
 
@@ -224,7 +224,7 @@ const Home = () => {
                         <div className="max-w-2xl">
                             <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('home.concierge.badge')}</span>
                             <h2 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">
-                                {i18n.language === 'ar' ? 'الكونسيرج' : 'Bespoke'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'الخاص' : 'Concierge'}</span>
+                                {t('home.concierge.title_main')} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('home.concierge.title_sub')}</span>
                             </h2>
                         </div>
                     </div>
@@ -259,7 +259,7 @@ const Home = () => {
             {/* CTA - Statement Section */}
             <section className="section-premium text-center">
                 <div className="max-w-4xl mx-auto space-y-12">
-                    <h2 className="text-4xl md:text-7xl font-serif text-domixa-dark italic">{i18n.language === 'ar' ? 'ابدأ' : 'Begin Your'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'رحلتك' : 'Journey'}</span></h2>
+                    <h2 className="text-4xl md:text-7xl font-serif text-domixa-dark italic">{t('home.cta.title_main')} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('home.cta.title_sub')}</span></h2>
                     <p className="text-gray-400 text-xl font-light">{t('home.cta.description')}</p>
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                         <Link to="/contact" className="btn-elite rounded-full px-16">{t('home.cta.contact')}</Link>

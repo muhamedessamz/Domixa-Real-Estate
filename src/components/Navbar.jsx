@@ -43,7 +43,7 @@ const Navbar = () => {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <div className="hidden lg:flex items-center space-x-10 rtl:space-x-reverse">
+                    <div className="hidden lg:flex items-center gap-10">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.path}
@@ -58,7 +58,7 @@ const Navbar = () => {
 
                         <button
                             onClick={toggleLanguage}
-                            className={`flex items-center space-x-2 rtl:space-x-reverse px-5 py-2 border rounded-full transition-all duration-500 ${useDarkText ? 'border-domixa-dark/10 text-domixa-dark hover:bg-domixa-dark hover:text-white' : 'border-white/20 text-white hover:bg-white hover:text-domixa-dark'}`}
+                            className={`flex items-center gap-2 px-5 py-2 border rounded-full transition-all duration-500 ${useDarkText ? 'border-domixa-dark/10 text-domixa-dark hover:bg-domixa-dark hover:text-white' : 'border-white/20 text-white hover:bg-white hover:text-domixa-dark'}`}
                         >
                             <Globe size={14} />
                             <span className="text-[10px] font-black tracking-widest uppercase">{i18n.language === 'en' ? 'AR' : 'EN'}</span>

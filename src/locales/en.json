@@ -41,7 +41,8 @@
     },
     "about": {
       "badge": "Our Vision",
-      "title": "Crafting Iconic Destinations",
+      "title_main": "Crafting Iconic",
+      "title_sub": "Destinations.",
       "description": "At Domixa, we don't just develop properties. We engineer legacies that stand the test of time, blending futuristic luxury with the soul of the UAE.",
       "stat_label": "Years of Excellence",
       "global_title": "Global Reach",
@@ -51,14 +52,16 @@
       "cta": "Discover Domixa"
     },
     "cta": {
-      "title": "Begin Your Journey",
+      "title_main": "Begin Your",
+      "title_sub": "Journey",
       "description": "Join the ranks of elite investors across the world's most dynamic real estate market.",
       "contact": "Contact Private Sales",
       "view_all": "View All Residencies"
     },
     "metrics": {
       "badge": "Institutional Pulse",
-      "title": "Market intelligence",
+      "title_main": "Market",
+      "title_sub": "Intelligence",
       "roi": "Average ROI",
       "appreciation": "Asset Appreciation",
       "yield": "Rental Yield",
@@ -66,7 +69,8 @@
     },
     "philosophy": {
       "badge": "The DNA of Domixa",
-      "title": "Architectural Sovereignty",
+      "title_main": "Architectural",
+      "title_sub": "Sovereignty.",
       "desc": "We believe in architecture that transcends utility. Our design philosophy is rooted in the pursuit of timelessness, where every line is a statement and every space is a sanctuary.",
       "item1": "Timeless Aesthetic",
       "item2": "Bespoke Grandeur",
@@ -74,7 +78,8 @@
     },
     "concierge": {
       "badge": "The Lifestyle Circle",
-      "title": "Bespoke Concierge",
+      "title_main": "Bespoke",
+      "title_sub": "Concierge",
       "advisory": "Private Advisory",
       "advisory_desc": "Discretionary consultancy for high-value portfolio expansion.",
       "mgmt": "Asset Management",
@@ -86,7 +91,8 @@
   "about": {
     "hero": {
       "badge": "Established 2005",
-      "title": "A Legacy of Excellence",
+      "title_main": "A Legacy of",
+      "title_sub": "Excellence.",
       "description": "For over two decades, Domixa has been the architect of luxury and the catalyst for strategic growth in the United Arab Emirates. We don't just build; we redefine skylines.",
       "stats": {
         "awards": "Global Awards",
@@ -102,7 +108,8 @@
     },
     "leadership": {
       "badge": "Leadership",
-      "title": "The Global Council"
+      "title_main": "The Global",
+      "title_sub": "Council"
     }
   },
   "project": {
