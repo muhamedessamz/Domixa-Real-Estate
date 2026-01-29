@@ -55,6 +55,32 @@
       "description": "Join the ranks of elite investors across the world's most dynamic real estate market.",
       "contact": "Contact Private Sales",
       "view_all": "View All Residencies"
+    },
+    "metrics": {
+      "badge": "Institutional Pulse",
+      "title": "Market intelligence",
+      "roi": "Average ROI",
+      "appreciation": "Asset Appreciation",
+      "yield": "Rental Yield",
+      "occupancy": "Portfolio Occupancy"
+    },
+    "philosophy": {
+      "badge": "The DNA of Domixa",
+      "title": "Architectural Sovereignty",
+      "desc": "We believe in architecture that transcends utility. Our design philosophy is rooted in the pursuit of timelessness, where every line is a statement and every space is a sanctuary.",
+      "item1": "Timeless Aesthetic",
+      "item2": "Bespoke Grandeur",
+      "item3": "Sustainable Legacy"
+    },
+    "concierge": {
+      "badge": "The Lifestyle Circle",
+      "title": "Bespoke Concierge",
+      "advisory": "Private Advisory",
+      "advisory_desc": "Discretionary consultancy for high-value portfolio expansion.",
+      "mgmt": "Asset Management",
+      "mgmt_desc": "End-to-end management ensuring long-term value preservation.",
+      "legal": "Legal Sovereignty",
+      "legal_desc": "Bespoke legal frameworks for international asset acquisition."
     }
   },
   "about": {

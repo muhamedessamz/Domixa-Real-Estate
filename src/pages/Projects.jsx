@@ -18,7 +18,7 @@ const Projects = () => {
                     </div>
                     <div className="flex space-x-12 rtl:space-x-reverse pb-4">
                         <div className="text-right rtl:text-left">
-                            <p className="text-5xl font-black text-domixa-dark">12</p>
+                            <p className="text-5xl font-black text-domixa-dark">11</p>
                             <p className="text-[10px] uppercase font-bold text-gray-400 tracking-widest mt-2">{t('project.header.active')}</p>
                         </div>
                         <div className="text-right rtl:text-left">

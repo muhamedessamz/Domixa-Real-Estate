@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Linkedin, Instagram, ArrowUpRight } from 'lucide-r
 import { motion } from 'framer-motion';
 
 const Contact = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
         <div className="pt-40 pb-32 bg-domixa-gray min-h-screen">

@@ -4,7 +4,7 @@ import { Target, Users, Landmark, Heart, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const About = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
         <div className="pt-40 pb-32 bg-white overflow-hidden">
@@ -30,7 +30,7 @@ const About = () => {
                                 <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest mt-4">{t('about.hero.stats.awards')}</p>
                             </div>
                             <div>
-                                <p className="text-5_xl font-black text-domixa-gold underline decoration-domixa-gold/30 underline-offset-8">12B+</p>
+                                <p className="text-5xl font-black text-domixa-gold underline decoration-domixa-gold/30 underline-offset-8">12B+</p>
                                 <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest mt-4">{t('about.hero.stats.assets')}</p>
                             </div>
                         </div>

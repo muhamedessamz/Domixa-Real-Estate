@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../sections/Hero';
 import { useTranslation } from 'react-i18next';
 import { properties } from '../data/mockData';
-import { ArrowUpRight, Star, MapPin, Maximize, BedDouble, Bath, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, Star, MapPin, Maximize, BedDouble, Bath, ArrowRight, TrendingUp, BarChart3, PieChart, Activity, Layers, Sparkles, ShieldCheck, Diamond, Headset } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -88,6 +88,43 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Investment Metrics - Institutional Pulse */}
+            <section className="section-premium bg-domixa-gray">
+                <div className="max-w-[1400px] mx-auto">
+                    <div className="text-center mb-24">
+                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('home.metrics.badge')}</span>
+                        <h2 className="text-5xl md:text-7xl font-serif text-domixa-dark italic">{i18n.language === 'ar' ? 'ذكاء' : 'Market'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'السوق' : 'Intelligence'}</span></h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+                        {[
+                            { icon: TrendingUp, label: t('home.metrics.roi'), value: '8.4%', trend: '+1.2%' },
+                            { icon: BarChart3, label: t('home.metrics.appreciation'), value: '12.8%', trend: '+2.4%' },
+                            { icon: PieChart, label: t('home.metrics.yield'), value: '6.5%', trend: '+0.8%' },
+                            { icon: Activity, label: t('home.metrics.occupancy'), value: '94%', trend: '+3.1%' },
+                        ].map((stat, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 group text-center"
+                            >
+                                <div className="w-16 h-16 bg-domixa-gold/10 rounded-2xl flex items-center justify-center text-domixa-gold mx-auto mb-8 group-hover:scale-110 transition-transform">
+                                    <stat.icon size={28} />
+                                </div>
+                                <p className="text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-4">{stat.label}</p>
+                                <div className="flex items-center justify-center space-x-3 rtl:space-x-reverse">
+                                    <p className="text-4xl font-black text-domixa-dark tracking-tighter">{stat.value}</p>
+                                    <span className="text-[10px] font-black text-green-500 bg-green-50 px-2 py-1 rounded-lg">{stat.trend}</span>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* About Section - Luxury Split */}
             <section className="section-premium bg-domixa-dark overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-[-15deg] translate-x-1/2"></div>
@@ -122,6 +159,99 @@ const Home = () => {
                             </div>
                         </div>
                         <button className="btn-elite bg-domixa-gold text-domixa-dark rounded-full hover:bg-white transition-all">{t('home.about.cta')}</button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Design Philosophy Section */}
+            <section className="min-h-[60vh] md:min-h-[700px] relative overflow-hidden group flex items-center py-24">
+                <img
+                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=90"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-[4s] group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-domixa-dark/70 backdrop-blur-sm"></div>
+
+                <div className="relative z-10 w-full px-6">
+                    <div className="max-w-5xl mx-auto text-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-8 mb-16"
+                        >
+                            <div>
+                                <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('home.philosophy.badge')}</span>
+                                <h2 className="text-6xl md:text-8xl font-serif text-white italic leading-none mb-6">
+                                    {i18n.language === 'ar' ? 'السيادة' : 'Architectural'} <br />
+                                    <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter block mt-2">{i18n.language === 'ar' ? 'المعمارية.' : 'Sovereignty.'}</span>
+                                </h2>
+                            </div>
+
+                            <p className="text-white/60 text-lg md:text-xl font-light italic leading-relaxed max-w-2xl mx-auto">
+                                {t('home.philosophy.desc')}
+                            </p>
+                        </motion.div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 pt-16 border-t border-white/10 max-w-4xl mx-auto">
+                            {[
+                                { icon: Layers, label: t('home.philosophy.item1') },
+                                { icon: Sparkles, label: t('home.philosophy.item2') },
+                                { icon: ShieldCheck, label: t('home.philosophy.item3') }
+                            ].map((item, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.3 + (i * 0.1) }}
+                                    className="flex flex-col items-center space-y-6"
+                                >
+                                    <div className="w-12 h-12 rounded-full border border-domixa-gold/30 flex items-center justify-center">
+                                        <item.icon size={20} className="text-domixa-gold" />
+                                    </div>
+                                    <p className="text-white text-[10px] font-black uppercase tracking-[0.4em]">{item.label}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Bespoke Concierge - The Lifestyle Circle */}
+            <section className="section-premium">
+                <div className="max-w-[1400px] mx-auto">
+                    <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+                        <div className="max-w-2xl">
+                            <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('home.concierge.badge')}</span>
+                            <h2 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">
+                                {i18n.language === 'ar' ? 'الكونسيرج' : 'Bespoke'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'الخاص' : 'Concierge'}</span>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        {[
+                            { icon: Headset, title: t('home.concierge.advisory'), desc: t('home.concierge.advisory_desc') },
+                            { icon: Diamond, title: t('home.concierge.mgmt'), desc: t('home.concierge.mgmt_desc') },
+                            { icon: ShieldCheck, title: t('home.concierge.legal'), desc: t('home.concierge.legal_desc') },
+                        ].map((service, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: idx * 0.2 }}
+                                className="group p-12 rounded-[3.5rem] bg-domixa-gray hover:bg-domixa-dark transition-all duration-700"
+                            >
+                                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-domixa-dark mb-10 group-hover:bg-domixa-gold group-hover:text-white group-hover:rotate-[360deg] transition-all duration-700 shadow-xl">
+                                    <service.icon size={32} />
+                                </div>
+                                <h4 className="text-2xl font-black text-domixa-dark group-hover:text-white transition-colors mb-4 uppercase tracking-tighter">{service.title}</h4>
+                                <p className="text-gray-500 group-hover:text-white/40 transition-colors font-light italic leading-relaxed">
+                                    {service.desc}
+                                </p>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>

@@ -5,7 +5,7 @@ import { Handshake, Building2, Globe2 } from 'lucide-react';
 import { developers } from '../data/mockData';
 
 const Developers = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
         <div className="bg-white min-h-screen">
