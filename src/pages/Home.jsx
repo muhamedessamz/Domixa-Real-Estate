@@ -16,17 +16,13 @@ const Home = () => {
             {/* Featured Properties - Editorial Grid */}
             <section className="section-premium">
                 <div className="max-w-[1400px] mx-auto">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
-                        <div className="max-w-2xl">
+                    <div className="flex flex-col items-center text-center mb-24 gap-8">
+                        <div className="max-w-4xl">
                             <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('home.featured.badge')}</span>
-                            <h2 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">
+                            <h2 className="text-5xl md:text-8xl font-serif text-domixa-dark italic leading-tight">
                                 {t('home.featured.title_main')} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('home.featured.title_sub')}</span>
                             </h2>
                         </div>
-                        <Link to="/properties" className="btn-elite bg-transparent border border-domixa-dark/10 text-domixa-dark hover:bg-domixa-dark hover:text-white rounded-full flex items-center group">
-                            <span>{t('home.featured.explore')}</span>
-                            <ArrowRight size={16} className="ml-2 rtl:mr-2 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
-                        </Link>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-20">
@@ -85,6 +81,13 @@ const Home = () => {
                             </motion.div>
                         ))}
                     </div>
+
+                    <div className="pt-20 flex justify-center">
+                        <Link to="/properties" className="btn-elite bg-transparent border border-domixa-dark/10 text-domixa-dark hover:bg-domixa-dark hover:text-white rounded-full flex items-center group">
+                            <span>{t('home.featured.explore')}</span>
+                            <ArrowRight size={16} className="ml-2 rtl:mr-2 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform" />
+                        </Link>
+                    </div>
                 </div>
             </section>
 
@@ -137,18 +140,18 @@ const Home = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 rtl:-left-6 rtl:md:-left-10 rtl:-right-auto w-32 h-32 md:w-48 md:h-48 bg-domixa-gold flex flex-col items-center justify-center rounded-2xl md:rounded-3xl shadow-2xl animate-float">
-                            <p className="text-white text-3xl md:text-5xl font-black">20</p>
-                            <p className="text-white/70 text-[8px] md:text-[10px] uppercase font-bold tracking-[0.15em] md:tracking-widest text-center px-4">{t('home.about.stat_label')}</p>
+                        <div className="absolute -bottom-4 -right-4 md:-bottom-10 md:-right-10 rtl:-left-4 rtl:md:-left-10 rtl:-right-auto w-24 h-24 md:w-48 md:h-48 bg-domixa-gold flex flex-col items-center justify-center rounded-xl md:rounded-3xl shadow-2xl animate-float">
+                            <p className="text-white text-2xl md:text-5xl font-black">20</p>
+                            <p className="text-white/70 text-[7px] md:text-[10px] uppercase font-bold tracking-[0.1em] md:tracking-widest text-center px-2">{t('home.about.stat_label')}</p>
                         </div>
                     </div>
-                    <div className="order-1 lg:order-2 space-y-10">
+                    <div className="order-1 lg:order-2 space-y-10 flex flex-col items-center text-center">
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px]">— {t('home.about.badge')}</span>
                         <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-tight">{t('home.about.title_main')} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('home.about.title_sub')}</span></h2>
-                        <p className="text-white/50 text-xl leading-relaxed font-light italic">
+                        <p className="text-white/50 text-xl leading-relaxed font-light italic max-w-2xl mx-auto">
                             "{t('home.about.description')}"
                         </p>
-                        <div className="grid grid-cols-2 gap-12 pt-8">
+                        <div className="grid grid-cols-2 gap-12 pt-8 w-full max-w-lg">
                             <div>
                                 <p className="text-white font-bold text-lg mb-2">{t('home.about.global_title')}</p>
                                 <p className="text-white/40 text-sm">{t('home.about.global_desc')}</p>
@@ -158,7 +161,11 @@ const Home = () => {
                                 <p className="text-white/40 text-sm">{t('home.about.elite_desc')}</p>
                             </div>
                         </div>
-                        <button className="btn-elite bg-domixa-gold text-domixa-dark rounded-full hover:bg-white transition-all">{t('home.about.cta')}</button>
+                        <Link to="/about">
+                            <button className="btn-elite bg-domixa-gold text-domixa-dark rounded-full hover:bg-white transition-all transform hover:scale-105 active:scale-95">
+                                {t('home.about.cta')}
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -181,7 +188,7 @@ const Home = () => {
                         >
                             <div>
                                 <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('home.philosophy.badge')}</span>
-                                <h2 className="text-6xl md:text-8xl font-serif text-white italic leading-none mb-6">
+                                <h2 className="text-4xl sm:text-5xl md:text-8xl font-serif text-white italic leading-[1.1] md:leading-none mb-6 tracking-tight">
                                     {t('home.philosophy.title_main')} <br />
                                     <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter block mt-2">{t('home.philosophy.title_sub')}</span>
                                 </h2>

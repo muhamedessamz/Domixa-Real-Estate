@@ -114,8 +114,15 @@ const Navbar = () => {
                         </Link>
                     ))}
                     <div className={`pt-12 flex flex-col items-center space-y-4 transition-all duration-400 delay-200 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                        <button onClick={toggleLanguage} className="text-domixa-gold text-lg font-black uppercase tracking-widest">{i18n.language === 'en' ? t('nav.toggle.ar') : t('nav.toggle.en')}</button>
-                        <div className="text-white/30 text-xs tracking-widest">+971 4 000 0000</div>
+                        <button
+                            onClick={toggleLanguage}
+                            className="flex items-center gap-3 px-8 py-3 border border-white/20 rounded-full text-white hover:bg-white hover:text-domixa-dark transition-all duration-300"
+                        >
+                            <Globe size={18} className="text-domixa-gold" />
+                            <span className="text-sm font-black uppercase tracking-[0.2em]">
+                                {i18n.language === 'en' ? 'Arabic' : 'English'}
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>
