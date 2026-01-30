@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { projects } from '../data/mockData';
+import { projects, developers } from '../data/mockData';
 import { ArrowUpRight, MapPin, Building2, Calendar, Layout, Info, Compass, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -139,11 +139,20 @@ const Projects = () => {
                 <div className="max-w-[1400px] mx-auto text-center">
                     <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('project.alliances.badge')}</span>
                     <h2 className="text-5xl font-serif text-domixa-dark italic mb-24">{t('project.alliances.title')}</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-20 opacity-30 grayscale hover:grayscale-0 transition-all duration-700 items-center">
-                        <div className="font-serif text-3xl font-bold italic tracking-tighter">EMAAR.</div>
-                        <div className="font-serif text-3xl font-bold italic tracking-tighter">MISR ITALIA.</div>
-                        <div className="font-serif text-3xl font-bold italic tracking-tighter">DAMAC.</div>
-                        <div className="font-serif text-3xl font-bold italic tracking-tighter">ALDAR.</div>
+                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-20 items-center justify-items-center">
+                        {developers.map((dev) => (
+                            <div key={dev.id} className="w-full flex items-center justify-center grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                                <img
+                                    src={dev.logo}
+                                    alt={dev.name}
+                                    className={`${dev.name === 'Meraas' ? 'h-10 md:h-12 lg:h-14' :
+                                            dev.name === 'MISR ITALIA' ? 'h-20 md:h-24 lg:h-32' :
+                                                'h-16 md:h-20 lg:h-24'
+                                        } w-auto max-w-[200px] md:max-w-[250px] lg:max-w-[300px] object-contain`}
+                                    title={dev.name}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

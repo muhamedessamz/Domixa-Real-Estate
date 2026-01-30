@@ -26,7 +26,12 @@ const Properties = () => {
                 <div className="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
                     <div className="max-w-3xl">
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('properties.header.badge')}</span>
-                        <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">{i18n.language === 'ar' ? 'مخزون' : 'Global'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'عالمي' : 'Inventory'}</span></h1>
+                        <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">
+                            {t('properties.header.title_part1')}{' '}
+                            <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">
+                                {t('properties.header.title_part2')}
+                            </span>
+                        </h1>
                         <p className="mt-8 text-gray-400 text-xl font-light italic leading-relaxed">
                             {t('properties.header.desc')}
                         </p>
@@ -85,7 +90,7 @@ const Properties = () => {
                                     <img src={property.image} alt="" className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-domixa-dark/10 to-transparent"></div>
                                     <div className="absolute top-8 left-8 rtl:right-8 rtl:left-auto bg-white px-5 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-domixa-dark shadow-sm">
-                                        {property.type}
+                                        {t(`common.types.${property.type.toLowerCase()}`)}
                                     </div>
                                     <div className="absolute bottom-10 right-10 rtl:left-10 rtl:right-auto opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                                         <Link to={`/property/${property.id}`} className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-domixa-dark shadow-xl hover:bg-domixa-gold hover:text-white transition-all">
@@ -108,7 +113,10 @@ const Properties = () => {
                                             <BedDouble size={16} className="text-gray-300" />
                                             <span className="text-[10px] font-bold uppercase tracking-widest text-domixa-dark">{property.beds} {t('common.beds')}</span>
                                         </div>
-                                        <p className="text-xl font-serif font-black italic text-domixa-dark">AED {property.price}</p>
+                                        <p className="text-xl font-serif font-black italic text-domixa-dark">
+                                            <span className="text-[10px] font-bold not-italic mr-1 rtl:ml-1 uppercase tracking-tighter opacity-60">{t('common.currency')}</span>
+                                            {property.price}
+                                        </p>
                                     </div>
                                 </div>
                             </motion.div>

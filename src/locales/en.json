@@ -89,7 +89,7 @@
     "concierge": {
       "badge": "The Lifestyle Circle",
       "title_main": "Bespoke",
-      "title_sub": "Concierge",
+      "title_sub": "Concierge Services",
       "advisory": "Private Advisory",
       "advisory_desc": "Discretionary consultancy for high-value portfolio expansion.",
       "mgmt": "Asset Management",
@@ -169,7 +169,8 @@
   "properties": {
     "header": {
       "badge": "Property Catalog",
-      "title": "Global Inventory",
+      "title_part1": "Premium Property",
+      "title_part2": "Portfolio",
       "desc": "Refined search for the world's most desired addresses. Filter by city, lifestyle, or investment yield.",
       "sort": "Sort By:",
       "sort_opt": "Premium First"
@@ -250,6 +251,11 @@
   "news": {
     "title": "News & Media",
     "subtitle": "Real Estate Dispatch",
+    "hero_title": {
+      "part1": "The Real Estate",
+      "part2": "Dispatch."
+    },
+    "hero_desc": "Curated global insights, market shifts, and architectural breakthroughs. Stay ahead of the elite property curve.",
     "featured": {
       "badge": "Breaking Story",
       "description": "Our latest quarterly analysis reveals unprecedented growth in high-yield assets across the UAE.",
@@ -306,6 +312,7 @@
       "penthouse": "Penthouse",
       "studio": "Studio",
       "maisonette": "Maisonette"
-    }
+    },
+    "currency": "AED"
   }
 }

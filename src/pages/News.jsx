@@ -3,42 +3,54 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Calendar, Tag, ChevronRight } from 'lucide-react';
 import { news } from '../data/mockData';
+import { Link } from 'react-router-dom';
 
 const News = () => {
     const { t, i18n } = useTranslation();
+    const currentLang = i18n.language.startsWith('ar') ? 'ar' : 'en';
 
     return (
         <div className="bg-white min-h-screen">
             {/* Editorial Hero */}
             <section className="pt-40 pb-20 bg-domixa-gray">
-                <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+                <div className="max-w-[1400px] mx-auto px-6 md:px-12 text-center">
                     <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('news.subtitle')}</span>
-                    <h1 className="text-6xl md:text-9xl font-serif text-domixa-dark italic leading-[0.8] mb-20">
-                        {i18n.language === 'ar' ? 'المنصة' : 'The Real Estate'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'الإخبارية.' : 'Dispatch.'}</span>
+                    <h1 className="text-6xl md:text-9xl font-serif text-domixa-dark italic leading-[1.1] mb-12">
+                        {t('news.hero_title.part1')} <br />
+                        <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">
+                            {t('news.hero_title.part2')}
+                        </span>
                     </h1>
+                    <p className="max-w-2xl mx-auto text-gray-400 text-xl font-light italic leading-relaxed mb-20">
+                        {t('news.hero_desc')}
+                    </p>
 
                     {/* Featured Story */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white rounded-[4rem] overflow-hidden shadow-2xl items-center"
+                        className="group grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white rounded-[4rem] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] items-stretch"
                     >
-                        <div className="aspect-[4/3] overflow-hidden">
-                            <img src={news[0].image} alt="" className="w-full h-full object-cover" />
+                        <div className="relative overflow-hidden min-h-[400px]">
+                            <img
+                                src={news[0].image}
+                                alt=""
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-domixa-dark/10 group-hover:bg-transparent transition-colors duration-700"></div>
                         </div>
-                        <div className="p-12 lg:p-20 space-y-8">
+                        <div className="p-12 lg:p-20 space-y-8 text-start rtl:text-end">
                             <div className="flex items-center gap-4 text-domixa-gold text-[10px] font-black uppercase tracking-widest">
                                 <Tag size={14} />
-                                <span>{t('news.featured.badge')} — {news[0].category[i18n.language]}</span>
+                                <span>{t('news.featured.badge')} — {news[0].category[currentLang]}</span>
                             </div>
                             <h2 className="text-4xl md:text-5xl font-serif font-black text-domixa-dark leading-tight italic">
-                                {news[0].title[i18n.language]}
+                                {news[0].title[currentLang]}
                             </h2>
                             <p className="text-gray-400 text-lg font-light italic leading-relaxed">
                                 {t('news.featured.description')}
                             </p>
                             <div className="flex items-center gap-6 pt-8">
-                                <button className="btn-elite rounded-full px-12">{t('news.featured.cta')}</button>
                                 <span className="text-gray-300 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
                                     <Calendar size={14} />
                                     {news[0].date}
@@ -53,9 +65,9 @@ const News = () => {
             <section className="section-premium">
                 <div className="max-w-[1400px] mx-auto">
                     <div className="flex justify-between items-end mb-24">
-                        <div>
+                        <div className="text-start rtl:text-end w-full">
                             <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('news.latest_title')}</span>
-                            <h2 className="text-5xl font-serif text-domixa-dark italic">{i18n.language === 'ar' ? 'آخر' : 'Recent'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'المستجدات.' : 'Updates.'}</span></h2>
+                            <h2 className="text-5xl font-serif text-domixa-dark italic">{i18n.language.startsWith('ar') ? 'آخر' : 'Recent'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language.startsWith('ar') ? 'المستجدات.' : 'Updates.'}</span></h2>
                         </div>
                     </div>
 
@@ -67,23 +79,17 @@ const News = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="group cursor-pointer"
+                                className="group text-start rtl:text-end"
                             >
                                 <div className="aspect-square rounded-[3rem] overflow-hidden shadow-xl mb-8 relative">
                                     <img src={item.image} alt="" className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" />
                                     <div className="absolute inset-0 bg-domixa-dark/20 group-hover:bg-transparent transition-colors"></div>
-                                    <div className="absolute bottom-6 left-6 rtl:right-6 rtl:left-auto flex items-center gap-3">
-                                        <span className="bg-white/95 px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-domixa-dark shadow-sm">
-                                            {item.category[i18n.language]}
-                                        </span>
-                                    </div>
                                 </div>
                                 <h3 className="text-2xl font-serif font-black text-domixa-dark group-hover:text-domixa-gold transition-colors leading-tight mb-4 italic">
-                                    {item.title[i18n.language]}
+                                    {item.title[currentLang]}
                                 </h3>
                                 <div className="flex justify-between items-center text-gray-400">
                                     <span className="text-[10px] font-bold uppercase tracking-widest">{item.date}</span>
-                                    <ArrowUpRight size={18} className="text-domixa-gold opacity-0 group-hover:opacity-100 transition-all" />
                                 </div>
                             </motion.div>
                         ))}

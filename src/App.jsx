@@ -16,6 +16,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Investors = lazy(() => import('./pages/Investors'));
 const News = lazy(() => import('./pages/News'));
+const NewsDetail = lazy(() => import('./pages/NewsDetail'));
 const Developers = lazy(() => import('./pages/Developers'));
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/investors" element={<Investors />} />
               <Route path="/news" element={<News />} />
+              <Route path="/news/:id" element={<NewsDetail />} />
               <Route path="/developers" element={<Developers />} />
             </Routes>
           </Suspense>

@@ -137,9 +137,9 @@ const Home = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="absolute -bottom-10 -right-10 rtl:-left-10 rtl:-right-auto w-48 h-48 bg-domixa-gold flex flex-col items-center justify-center rounded-3xl shadow-2xl animate-float">
-                            <p className="text-white text-5xl font-black">20</p>
-                            <p className="text-white/70 text-[10px] uppercase font-bold tracking-widest">{t('home.about.stat_label')}</p>
+                        <div className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 rtl:-left-6 rtl:md:-left-10 rtl:-right-auto w-32 h-32 md:w-48 md:h-48 bg-domixa-gold flex flex-col items-center justify-center rounded-2xl md:rounded-3xl shadow-2xl animate-float">
+                            <p className="text-white text-3xl md:text-5xl font-black">20</p>
+                            <p className="text-white/70 text-[8px] md:text-[10px] uppercase font-bold tracking-[0.15em] md:tracking-widest text-center px-4">{t('home.about.stat_label')}</p>
                         </div>
                     </div>
                     <div className="order-1 lg:order-2 space-y-10">
@@ -218,13 +218,16 @@ const Home = () => {
             </section>
 
             {/* Bespoke Concierge - The Lifestyle Circle */}
-            <section className="section-premium">
+            <section className="section-premium pb-12 md:pb-16 lg:pb-20">
                 <div className="max-w-[1400px] mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
-                        <div className="max-w-2xl">
+                        <div className="max-w-4xl mx-auto text-center">
                             <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('home.concierge.badge')}</span>
-                            <h2 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-none">
-                                {t('home.concierge.title_main')} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('home.concierge.title_sub')}</span>
+                            <h2 className="text-6xl md:text-8xl font-serif text-domixa-dark italic leading-[1.1]">
+                                {t('home.concierge.title_main')} <br />
+                                <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">
+                                    {t('home.concierge.title_sub')}
+                                </span>
                             </h2>
                         </div>
                     </div>
@@ -257,7 +260,7 @@ const Home = () => {
             </section>
 
             {/* CTA - Statement Section */}
-            <section className="section-premium text-center">
+            <section className="section-premium pt-8 md:pt-10 lg:pt-12 text-center">
                 <div className="max-w-4xl mx-auto space-y-12">
                     <h2 className="text-4xl md:text-7xl font-serif text-domixa-dark italic">{t('home.cta.title_main')} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('home.cta.title_sub')}</span></h2>
                     <p className="text-gray-400 text-xl font-light">{t('home.cta.description')}</p>

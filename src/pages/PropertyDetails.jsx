@@ -56,7 +56,7 @@ const PropertyDetails = () => {
                     <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-end gap-12">
                         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} className="space-y-6 max-w-4xl">
                             <span className="bg-domixa-gold/20 text-domixa-gold px-6 py-2 rounded-full border border-domixa-gold/30 text-[10px] uppercase font-black tracking-[0.5em] backdrop-blur-3xl">
-                                {property.type} Portfolio
+                                {t(`common.types.${property.type.toLowerCase()}`)} {i18n.language === 'ar' ? 'فاخر' : 'Portfolio'}
                             </span>
                             <h1 className="text-64 md:text-8xl lg:text-9xl font-serif text-white italic leading-[0.8] mb-8">
                                 {property.title[i18n.language]}
@@ -69,7 +69,10 @@ const PropertyDetails = () => {
 
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-white/5 backdrop-blur-3xl p-12 rounded-[4rem] border border-white/10 shadow-2xl text-center min-w-[320px]">
                             <p className="text-[10px] font-black uppercase text-white/30 tracking-[0.4em] mb-4">Starting From</p>
-                            <p className="text-5xl font-serif font-black italic text-white mb-2">AED {property.price}</p>
+                            <p className="text-5xl font-serif font-black italic text-white mb-2">
+                                <span className="text-xs font-bold not-italic mr-2 rtl:ml-2 uppercase tracking-widest opacity-40">{t('common.currency')}</span>
+                                {property.price}
+                            </p>
                             <p className="text-domixa-gold text-xs font-bold tracking-widest uppercase">Investment Grade</p>
                         </motion.div>
                     </div>

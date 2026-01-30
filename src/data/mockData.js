@@ -176,28 +176,28 @@ export const projects = [
     name: { en: "Terra Sovereign Towers", ar: "أبراج تيرا سيفرين" },
     status: { en: "Piling Works", ar: "أعمال الأوتاد" },
     location: { en: "Al Maryah, Abu Dhabi", ar: "جزيرة المارية، أبوظبي" },
-    image: "https://images.unsplash.com/photo-1512633017083-67231aba710d?auto=format&fit=crop&w=800&q=80"
+    image: "https://d3h330vgpwpjr8.cloudfront.net/x/1392x/Terra_Tower_at_Dubailand_by_Dugasta_Properties_863ec89a3e.webp"
   },
   {
     id: 8,
     name: { en: "The Boulevard Al Zorah", ar: "بوليفارد الزورا" },
     status: { en: "Launch Phase", ar: "مرحلة الإطلاق" },
     location: { en: "Al Zorah, Ajman", ar: "الزورا، عجمان" },
-    image: "https://images.unsplash.com/photo-1600566753190-17f0bb2a6c3e?auto=format&fit=crop&w=800&q=80"
+    image: "https://cdn.emrbz.com/d/2b0eb728406d04823212cfd271d22979fa593e59/70/1360x906%5E/image"
   },
   {
     id: 9,
     name: { en: "Sky Gardens Executive", ar: "سكاي جاردنز التنفيذية" },
     status: { en: "Topping Out", ar: "اكتمال الهيكل الخرساني" },
     location: { en: "Dubai Hills, Dubai", ar: "دبي هيلز، دبي" },
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80"
+    image: "https://cdn.insiderealty.ae/images/sky-gardens-ajman-1_6psszkjhln.webp"
   },
   {
     id: 10,
     name: { en: "The Regent Maritime", ar: "ريجنت ماريتيم" },
     status: { en: "Internal Works", ar: "الأعمال الداخلية" },
     location: { en: "Rashid Yachts & Marina, Dubai", ar: "ميناء راشد واليخوت، دبي" },
-    image: "https://images.unsplash.com/photo-1479839672849-ab36f4692484?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.trvl-media.com/lodging/14000000/13370000/13364300/13364220/f059de31.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill"
   }
 ];
 
@@ -216,29 +216,61 @@ export const news = [
     title: { en: "Domixa Announces Q4 Record Growth", ar: "دوميكسا تعلن عن نمو قياسي في الربع الرابع" },
     date: "Jan 24, 2026",
     category: { en: "Corporate", ar: "مؤسسي" },
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+    author: { en: "Sarah Al-Rashid", ar: "سارة الراشد" },
+    readingTime: { en: "5 min read", ar: "قراءة في 5 دقائق" },
+    content: {
+      en: "Domixa Real Estate is proud to announce a historic milestone in its financial performance, with Q4 2025 delivering a 32% increase in net revenue compared to the previous year. This growth is driven by the successful launch of high-end residential projects in Business Bay and Palm Jumeirah. 'Our commitment to engineering excellence and strategic placement has positioned Domixa as the preferred choice for elite global investors,' says CEO Ahmed Al-Mansoori. The report also highlights a significant rise in international interest, particularly from European and East Asian markets.",
+      ar: "تفخر دوميكسا العقارية بالإعلان عن طفرة تاريخية في أدائها المالي، حيث سجل الربع الرابع من عام 2025 زيادة بنسبة 32% في صافي الإيرادات مقارنة بالعام السابق. يعود هذا النمو إلى الإطلاق الناجح لمشاريع سكنية فاخرة في خليج الأعمال ونخلة جميرا. وصرح الرئيس التنفيذي أحمد المنصوري قائلًا: 'إن التزامنا بالتميز الهندسي والمواقع الاستراتيجية وضع دوميكسا كخيار مفضل للمستثمرين العالميين النخبة'. كما يسلط التقرير الضوء على ارتفاع ملحوظ في الاهتمام الدولي، لا سيما من الأسواق الأوروبية وشرق آسيا."
+    }
   },
   {
     id: 2,
     title: { en: "Sustainable Living: The Future of UAE", ar: "الحياة المستدامة: مستقبل الإمارات" },
     date: "Jan 15, 2026",
     category: { en: "Lifestyle", ar: "أسلوب الحياة" },
-    image: "https://images.unsplash.com/photo-1518005020470-588a3a307a00?auto=format&fit=crop&w=800&q=80"
+    image: "https://worldpermacultureassociation.com/wp-content/uploads/Embarking-Enlightening-Journey-UAE.png",
+    author: { en: "Michael Chen", ar: "مايكل تشن" },
+    readingTime: { en: "4 min read", ar: "قراءة في 4 دقائق" },
+    content: {
+      en: "Sustainability is no longer an option but a core pillar of luxury living in the UAE. Domixa's recent projects incorporate AI-driven climate control, greywater recycling systems, and solar-integrated facades. These innovations not only reduce the carbon footprint but also offer a healthier, more tech-forward living environment for our residents. As the UAE moves towards its Net Zero 2050 goal, Domixa is leading the charge by redefining what it means to live luxuriously while preserving the planet for future generations.",
+      ar: "لم تعد الاستدامة مجرد خيار، بل أصبحت ركيزة أساسية للحياة الفاخرة في الإمارات. تدمج مشاريع دوميكسا الأخيرة أنظمة التحكم في المناخ المدعومة بالذكاء الاصطناعي، وأنظمة إعادة تدوير المياه، والواجهات المتكاملة مع الطاقة الشمسية. هذه الابتكارات لا تقلل من البصمة الكربونية فحسب، بل توفر أيضًا بيئة معيشية أكثر صحة وتقدمًا تقنيًا لسكاننا. وبينما تتجه الإمارات نحو هدفها المتمثل في تحقيق صافي انبعاثات صفرية بحلول عام 2050، تقود دوميكسا المسيرة من خلال إعادة تعريف المعنى الحقيقي للحياة الفاخرة مع الحفاظ على الكوكب للأجيال القادمة."
+    }
   },
   {
     id: 3,
     title: { en: "Expansion into International Markets", ar: "التوسع في الأسواق الدولية" },
     date: "Jan 02, 2026",
     category: { en: "Strategy", ar: "إستراتيجية" },
-    image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80"
+    image: "https://specials-images.forbesimg.com/imageserve/602ede248ec1db963125fbd9/960x0.jpg",
+    author: { en: "Elena Romanoff", ar: "إيلينا رومانوف" },
+    readingTime: { en: "6 min read", ar: "قراءة في 6 دقائق" },
+    content: {
+      en: "In a bold strategic move, Domixa announces its first international expansion with prime acquisitions in London and Singapore. This move aims to provide our existing clients with global portfolio diversification while importing world-class architectural standards back to the UAE. The expansion is part of a 5-year plan to establish Domixa as a truly global real estate powerhouse. Each international project will carry the 'Domixa Signature'—a blend of local cultural context and the futuristic DNA that defines our brand.",
+      ar: "في خطوة استراتيجية جريئة، تعلن دوميكسا عن أول توسع دولي لها من خلال استحواذات متميزة في لندن وسنغافورة. تهدف هذه الخطوة إلى تزويد عملائنا الحاليين بتنوع عالمي في محافظهم الاستثمارية مع استقدام معايير معمارية عالمية المستوى إلى الإمارات. ويعد هذا التوسع جزءًا من خطة خمسية لترسيخ مكانة دوميكسا كقوة عقارية عالمية بحق. وسيحمل كل مشروع دولي 'بصمة دوميكسا'—وهي مزيج من السياق الثقافي المحلي والسمات المستقبلية التي تميز علامتنا التجارية."
+    }
+  },
+  {
+    id: 4,
+    title: { en: "Elite Investment Forum 2026", ar: "منتدى النخبة للاستثمار 2026" },
+    date: "Jan 30, 2026",
+    category: { en: "Investment", ar: "استثمار" },
+    image: "https://images.financemagnates.com/images/Exness_id_17d8bf50-6436-4e0d-968d-3de04e83d8ce_size900.jpg",
+    author: { en: "David Sterling", ar: "ديفيد ستيرلينغ" },
+    readingTime: { en: "7 min read", ar: "قراءة في 7 دقائق" },
+    content: {
+      en: "Domixa's annual Elite Investment Forum brought together the world's most influential real estate moguls and financial analysts to discuss the trajectory of the UAE property market. The consensus points towards a 'Golden Decade' of sustained growth, driven by progressive visa reforms and massive infrastructure projects. Domixa showcased its future roadmap, including the integration of blockchain for transparent property transactions and the expansion of its ultra-luxury portfolio. 'We are not just building homes; we are building the economic pillars of tomorrow,' stated the keynote speaker.",
+      ar: "جمع منتدى النخبة للاستثمار السنوي الذي تنظمه دوميكسا أكثر أقطاب العقارات والمحللين الماليين نفوذاً في العالم لمناقشة مسار سوق العقارات في الإمارات. تشير التوقعات إلى 'عقد ذهبي' من النمو المستدام، مدفوعاً بإصلاحات التأشيرات التقدمية ومشاريع البنية التحتية الضخمة. استعرضت دوميكسا خارطة طريقها المستقبلية، بما في ذلك دمج تقنية البلوكشين لمعاملات عقارية شفافة وتوسيع محفظتها فائقة الفخامة. وقال المتحدث الرئيسي: 'نحن لا نبني مجرد منازل، بل نبني الركائز الاقتصادية للغد'."
+    }
   }
 ];
 
 export const developers = [
-  { id: 1, name: "Emaar Properties", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Emaar_Properties_Logo.svg/1024px-Emaar_Properties_Logo.svg.png" },
-  { id: 2, name: "Nakheel", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Nakheel_Logo.svg/1200px-Nakheel_Logo.svg.png" },
-  { id: 3, name: "DAMAC Properties", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Damac_Properties_Logo.svg/1200px-Damac_Properties_Logo.svg.png" },
-  { id: 4, name: "Dubai Properties", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Dubai_Properties_logo.svg/1200px-Dubai_Properties_logo.svg.png" }
+  { id: 1, name: "Emaar Properties", logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/EMAAR_WORD_MARK_EN.png" },
+  { id: 3, name: "DAMAC Properties", logo: "https://res.cloudinary.com/protenders/image/upload/s--AxSAI3KK--/c_limit,d_default_logo,dpr_auto,f_auto,fl_progressive:semi,q_auto:eco,w_auto:100/uq8ic3y3kddtbbru30bh.png" },
+  { id: 5, name: "ALDAR", logo: "https://www.pngkey.com/png/full/853-8535096_download-aldar-properties-logo-transparent.png" },
+  { id: 6, name: "MISR ITALIA", logo: "https://sms-eg.com/wp-content/uploads/2018/04/Misr-210x210.png" },
+  { id: 7, name: "Meraas", logo: "https://upload.wikimedia.org/wikipedia/commons/6/68/Meraas-logo.svg" }
 ];
 
 export const investorStats = [
