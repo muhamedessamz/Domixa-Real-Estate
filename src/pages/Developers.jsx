@@ -15,17 +15,17 @@ const Developers = () => {
                     <div className="absolute inset-0 bg-gradient-to-l from-domixa-gold/30 to-transparent"></div>
                 </div>
 
-                <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
+                <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 text-center">
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="max-w-4xl"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="max-w-4xl mx-auto flex flex-col items-center"
                     >
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('developers.subtitle')}</span>
                         <h1 className="text-6xl md:text-9xl font-serif text-white italic leading-[0.8] mb-12">
                             {i18n.language === 'ar' ? 'تحالفات' : 'Architectural'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'معمارية.' : 'Alliances.'}</span>
                         </h1>
-                        <p className="text-white/40 text-2xl font-light italic leading-relaxed max-w-2xl">
+                        <p className="text-white/40 text-2xl font-light italic leading-relaxed">
                             "{t('developers.description')}"
                         </p>
                     </motion.div>

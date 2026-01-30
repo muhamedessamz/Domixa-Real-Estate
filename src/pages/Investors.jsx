@@ -17,9 +17,9 @@ const Investors = () => {
 
                 <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="lg:col-span-7"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-start"
                     >
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('investors.subtitle')}</span>
                         <h1 className={`text-5xl md:text-8xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-tight' : 'font-serif italic leading-[0.8]'} text-white mb-10`}>
@@ -28,16 +28,16 @@ const Investors = () => {
                                 {t('investors.hero_title.part2')}
                             </span>
                         </h1>
-                        <p className="text-white/50 text-xl font-light italic max-w-xl">
+                        <p className="text-white/50 text-xl font-light italic max-w-xl mx-auto lg:mx-0">
                             "{t('investors.narrative')}"
                         </p>
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9, x: 50 }}
-                        animate={{ opacity: 1, scale: 1, x: 0 }}
+                        initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
-                        className="relative lg:col-span-5 hidden lg:block"
+                        className="relative lg:col-span-5 block order-first lg:order-last mb-12 lg:mb-0"
                     >
                         {/* Premium Architectural Image Box */}
                         <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl border border-white/10 bg-domixa-gold/5">
@@ -53,7 +53,7 @@ const Investors = () => {
                         <motion.div
                             animate={{ y: [0, -15, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -bottom-8 -left-8 bg-white/5 backdrop-blur-3xl p-6 rounded-[2rem] border border-white/20 shadow-2xl flex items-center gap-4"
+                            className="absolute -bottom-8 lg:-left-8 left-4 bg-white/5 backdrop-blur-3xl p-6 rounded-[2rem] border border-white/20 shadow-2xl flex items-center gap-4"
                         >
                             <div className="w-12 h-12 rounded-xl bg-domixa-gold/20 flex items-center justify-center text-domixa-gold">
                                 <ShieldCheck size={24} />
@@ -71,7 +71,7 @@ const Investors = () => {
             <section className="section-premium">
                 <div className="max-w-[1400px] mx-auto">
                     <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
-                        <div>
+                        <div className="text-center lg:text-start w-full">
                             <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('investors.performance_title')}</span>
                             <h2 className="text-5xl md:text-7xl font-serif text-domixa-dark italic">{i18n.language === 'ar' ? 'كفاءة' : 'Financial'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'مالية.' : 'Velocity.'}</span></h2>
                         </div>
@@ -103,19 +103,19 @@ const Investors = () => {
             </section>
 
             {/* Governance Section */}
-            <section className="bg-domixa-gray py-40 overflow-hidden relative">
+            <section className="bg-domixa-gray pt-20 pb-40 overflow-hidden relative">
                 <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-                    <div>
+                    <div className="flex flex-col items-center text-center">
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('investors.fiduciary.title')}</span>
                         <h2 className="text-5xl md:text-7xl font-serif text-domixa-dark italic leading-tight mb-12">{i18n.language === 'ar' ? 'تميز' : 'Fiduciary'} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language === 'ar' ? 'ائتماني.' : 'Excellence.'}</span></h2>
-                        <div className="space-y-8">
+                        <div className="space-y-8 w-full max-w-lg">
                             {[
                                 { icon: ShieldCheck, title: t('investors.fiduciary.risk'), desc: t('investors.fiduciary.risk_desc') },
                                 { icon: Landmark, title: t('investors.fiduciary.legal'), desc: t('investors.fiduciary.legal_desc') },
                                 { icon: Users, title: t('investors.fiduciary.users'), desc: t('investors.fiduciary.users_desc') }
                             ].map((item, i) => (
-                                <div key={i} className="flex gap-6 items-start">
-                                    <div className="w-12 h-12 rounded-2xl bg-domixa-dark/5 flex items-center justify-center text-domixa-gold flex-shrink-0">
+                                <div key={i} className="flex flex-col items-center text-center">
+                                    <div className="w-12 h-12 rounded-2xl bg-domixa-dark/5 flex items-center justify-center text-domixa-gold flex-shrink-0 mb-4">
                                         <item.icon size={24} />
                                     </div>
                                     <div>

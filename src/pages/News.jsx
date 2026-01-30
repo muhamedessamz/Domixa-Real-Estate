@@ -39,8 +39,8 @@ const News = () => {
                             />
                             <div className="absolute inset-0 bg-domixa-dark/10 group-hover:bg-transparent transition-colors duration-700"></div>
                         </div>
-                        <div className="p-12 lg:p-20 space-y-8 text-start rtl:text-end">
-                            <div className="flex items-center gap-4 text-domixa-gold text-[10px] font-black uppercase tracking-widest">
+                        <div className="p-12 lg:p-20 space-y-8 text-center lg:text-start rtl:lg:text-end flex flex-col items-center lg:items-start">
+                            <div className="flex items-center justify-center lg:justify-start gap-4 text-domixa-gold text-[10px] font-black uppercase tracking-widest">
                                 <Tag size={14} />
                                 <span>{t('news.featured.badge')} — {news[0].category[currentLang]}</span>
                             </div>
@@ -50,7 +50,7 @@ const News = () => {
                             <p className="text-gray-400 text-lg font-light italic leading-relaxed">
                                 {t('news.featured.description')}
                             </p>
-                            <div className="flex items-center gap-6 pt-8">
+                            <div className="flex items-center justify-center lg:justify-start gap-6 pt-8">
                                 <span className="text-gray-300 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
                                     <Calendar size={14} />
                                     {news[0].date}
@@ -65,7 +65,7 @@ const News = () => {
             <section className="section-premium">
                 <div className="max-w-[1400px] mx-auto">
                     <div className="flex justify-between items-end mb-24">
-                        <div className="text-start rtl:text-end w-full">
+                        <div className="text-center lg:text-start rtl:lg:text-end w-full">
                             <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('news.latest_title')}</span>
                             <h2 className="text-5xl font-serif text-domixa-dark italic">{i18n.language.startsWith('ar') ? 'آخر' : 'Recent'} <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{i18n.language.startsWith('ar') ? 'المستجدات.' : 'Updates.'}</span></h2>
                         </div>
@@ -79,7 +79,7 @@ const News = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="group text-start rtl:text-end"
+                                className="group text-center lg:text-start rtl:lg:text-end"
                             >
                                 <div className="aspect-square rounded-[3rem] overflow-hidden shadow-xl mb-8 relative">
                                     <img src={item.image} alt="" className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" />
@@ -88,7 +88,7 @@ const News = () => {
                                 <h3 className="text-2xl font-serif font-black text-domixa-dark group-hover:text-domixa-gold transition-colors leading-tight mb-4 italic">
                                     {item.title[currentLang]}
                                 </h3>
-                                <div className="flex justify-between items-center text-gray-400">
+                                <div className="flex justify-center lg:justify-between items-center text-gray-400">
                                     <span className="text-[10px] font-bold uppercase tracking-widest">{item.date}</span>
                                 </div>
                             </motion.div>
