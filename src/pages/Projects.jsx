@@ -15,10 +15,10 @@ const Projects = () => {
                     <div className="max-w-3xl">
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-6 block">— {t('project.masterplan')}</span>
                         <h1 className={`text-6xl md:text-8xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-[1.2]' : 'font-serif italic leading-none'} text-domixa-dark mb-2`}>
-                            {i18n.language === 'ar' ? 'هندسة' : 'Architecting'}
+                            {t('project.header.title_part1')}
                             <br />
                             <span className={`not-italic font-black text-domixa-gold uppercase tracking-tighter ${i18n.language === 'ar' ? 'text-7xl md:text-8xl' : ''}`}>
-                                {i18n.language === 'ar' ? 'مراكز أيقونية.' : 'Iconic Hubs.'}
+                                {t('project.header.title_part2')}
                             </span>
                         </h1>
                     </div>
@@ -47,10 +47,10 @@ const Projects = () => {
                         <div className="relative z-10 text-center space-y-12 max-w-2xl px-8">
                             <Compass size={64} className="text-domixa-gold mx-auto animate-pulse" />
                             <h2 className={`text-5xl md:text-7xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-[1.2]' : 'font-serif italic leading-tight'} text-white`}>
-                                {i18n.language === 'ar' ? 'استكشف' : 'Explore the'}
+                                {t('project.experience.title_part1')}
                                 <br />
                                 <span className={`not-italic font-black text-domixa-gold uppercase tracking-tighter ${i18n.language === 'ar' ? 'text-6xl md:text-7xl' : ''}`}>
-                                    {i18n.language === 'ar' ? 'المخطط العام.' : 'Masterplan.'}
+                                    {t('project.experience.title_part2')}
                                 </span>
                             </h2>
                             <p className="text-white/40 text-lg font-light italic">{t('project.experience.desc')}</p>
@@ -146,8 +146,8 @@ const Projects = () => {
                                     src={dev.logo}
                                     alt={dev.name}
                                     className={`${dev.name === 'Meraas' ? 'h-10 md:h-12 lg:h-14' :
-                                            dev.name === 'MISR ITALIA' ? 'h-20 md:h-24 lg:h-32' :
-                                                'h-16 md:h-20 lg:h-24'
+                                        dev.name === 'MISR ITALIA' ? 'h-20 md:h-24 lg:h-32' :
+                                            'h-16 md:h-20 lg:h-24'
                                         } w-auto max-w-[200px] md:max-w-[250px] lg:max-w-[300px] object-contain`}
                                     title={dev.name}
                                 />

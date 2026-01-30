@@ -25,15 +25,14 @@ const Hero = () => {
             </div>
 
             {/* Main Content Layout */}
-            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 items-center gap-20">
+            <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-20 pt-52 lg:pt-24">
 
                 {/* Primary Narrative */}
-                <div className="lg:col-span-8 space-y-12">
+                <div className="lg:col-span-8 space-y-8 lg:space-y-12 flex flex-col items-center text-center lg:items-start lg:text-start">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1 }}
-                        className="flex items-center gap-6"
+                        className="flex items-center gap-6 mt-12 lg:mt-0"
                     >
                         <span className="bg-domixa-gold/10 text-domixa-gold px-6 py-2 rounded-full border border-domixa-gold/20 text-[10px] font-black uppercase tracking-[0.5em] backdrop-blur-md">
                             {t('hero.title_badge')}
@@ -45,10 +44,10 @@ const Hero = () => {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
-                            className={`text-6xl md:text-9xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-tight' : 'font-serif italic leading-[0.8]'} text-white mb-12`}
+                            className={`text-4xl sm:text-5xl md:text-9xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-tight' : 'font-serif italic leading-[0.8]'} text-white mb-8 lg:mb-12`}
                         >
                             {t('hero.title_part1')} <br />
-                            <span className={`not-italic font-black text-domixa-gold uppercase tracking-tighter ${i18n.language === 'ar' ? 'text-7xl md:text-8xl font-black' : ''}`}>
+                            <span className={`not-italic font-black text-domixa-gold uppercase tracking-tighter ${i18n.language === 'ar' ? 'text-5xl sm:text-6xl md:text-8xl font-black' : ''}`}>
                                 {t('hero.title_part2')}
                             </span>
                         </motion.h1>
@@ -58,7 +57,7 @@ const Hero = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1, delay: 0.4 }}
-                        className="text-xl md:text-2xl text-white/50 max-w-2xl font-light leading-relaxed italic"
+                        className="text-xl md:text-2xl text-white/50 max-w-2xl font-light leading-relaxed italic mx-auto lg:mx-0"
                     >
                         {t('hero.description')}
                     </motion.p>
@@ -98,33 +97,33 @@ const Hero = () => {
                 </div>
 
                 {/* Visual Anchor / Stats Area */}
-                <div className="hidden lg:col-span-4 lg:flex flex-col items-end justify-center space-y-16">
+                <div className="lg:col-span-4 flex flex-col items-center lg:items-end justify-center space-y-16 mt-4 lg:mt-0">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1.5 }}
-                        className="bg-white/5 backdrop-blur-2xl p-10 rounded-[3rem] border border-white/10 shadow-2xl space-y-8 w-full max-w-sm hover-lift"
+                        className="bg-white/5 backdrop-blur-2xl p-6 lg:p-10 rounded-2xl lg:rounded-[3rem] border border-white/10 shadow-2xl space-y-6 lg:space-y-8 w-full max-w-[280px] lg:max-w-sm hover-lift"
                     >
                         <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 bg-domixa-gold/20 rounded-2xl flex items-center justify-center text-domixa-gold">
-                                <Award size={24} />
+                            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-domixa-gold/20 rounded-2xl flex items-center justify-center text-domixa-gold">
+                                <Award size={20} className="lg:w-6 lg:h-6" />
                             </div>
-                            <p className="text-white font-serif italic text-lg">{t('hero.award')}</p>
+                            <p className="text-white font-serif italic text-sm lg:text-lg">{t('hero.award')}</p>
                         </div>
                         <div className="h-px bg-white/10 w-full"></div>
                         <div className="grid grid-cols-2 gap-8">
                             <div>
-                                <p className="text-2xl font-black text-white">{t('hero.sales_vol_val')}</p>
+                                <p className="text-xl lg:text-2xl font-black text-white">{t('hero.sales_vol_val')}</p>
                                 <p className="text-[10px] text-white/30 uppercase font-bold tracking-widest">{t('hero.sales_vol')}</p>
                             </div>
                             <div>
-                                <p className="text-2xl font-black text-white">{t('hero.asset_units_val')}</p>
+                                <p className="text-xl lg:text-2xl font-black text-white">{t('hero.asset_units_val')}</p>
                                 <p className="text-[10px] text-white/30 uppercase font-bold tracking-widest">{t('hero.asset_units')}</p>
                             </div>
                         </div>
                     </motion.div>
 
-                    <div className="flex flex-col items-center gap-6">
+                    <div className="hidden lg:flex flex-col items-center gap-6">
                         <button className="w-20 h-20 bg-white/5 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/10 hover:bg-domixa-gold hover:text-domixa-dark transition-all duration-500 shadow-2xl group">
                             <Play size={28} fill="currentColor" />
                         </button>

@@ -18,8 +18,9 @@ const About = () => {
                         transition={{ duration: 1 }}
                     >
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('about.hero.badge')}</span>
-                        <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic mb-12 leading-none">
-                            {t('about.hero.title_main')} <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('about.hero.title_sub')}</span>
+                        <h1 className="text-6xl md:text-8xl font-serif text-domixa-dark italic mb-12 flex flex-col gap-4 md:gap-6">
+                            <span>{t('about.hero.title_main')}</span>
+                            <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">{t('about.hero.title_sub')}</span>
                         </h1>
                         <p className="text-gray-500 text-xl font-light italic leading-relaxed mb-12">
                             {t('about.hero.description')}

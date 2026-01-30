@@ -14,29 +14,21 @@ const PropertyDetails = () => {
     const { t, i18n } = useTranslation();
     const [activeTab, setActiveTab] = useState('overview');
     const [activeFloor, setActiveFloor] = useState(0);
-    const [isNavSticky, setIsNavSticky] = useState(false);
-
     const property = properties.find(p => p.id === parseInt(id));
-
-    useEffect(() => {
-        const handleScroll = () => setIsNavSticky(window.scrollY > 800);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     if (!property) return <div className="pt-40 text-center font-serif italic text-2xl">Asset Not Found</div>;
 
     const amenities = [
-        { title: "Boutique Retail", img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80" },
-        { title: "Wellness Club", img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" },
-        { title: "Smart Living", img: "https://images.unsplash.com/photo-1558002038-1a510526e033?auto=format&fit=crop&w=800&q=80" },
-        { title: "Lush Greenery", img: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80" }
+        { title: t('property_details.location.points.retail'), img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80" },
+        { title: t('property_details.location.points.wellness'), img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" },
+        { title: t('property_details.features.amenity_smart'), img: "https://images.unsplash.com/photo-1558002038-1a510526e033?auto=format&fit=crop&w=800&q=80" },
+        { title: t('property_details.features.amenity_lush'), img: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80" }
     ];
 
     const floorPlans = [
-        { type: "Executive Suite", size: "120 m²", img: "https://images.adsttc.com/media/images/5e1d/02c3/3312/fd51/9d00/0166/large_jpg/Floor_Plan_1.jpg?1578959545" },
-        { type: "Family Penthouse", size: "250 m²", img: "https://images.adsttc.com/media/images/5e1d/02c3/3312/fd51/9d00/0166/large_jpg/Floor_Plan_1.jpg?1578959545" },
-        { type: "Signature Villa", size: "450 m²", img: "https://images.adsttc.com/media/images/5e1d/02c3/3312/fd51/9d00/0166/large_jpg/Floor_Plan_1.jpg?1578959545" }
+        { type: t('common.types.penthouse'), size: "120 m²", img: "https://images.adsttc.com/media/images/5e1d/02c3/3312/fd51/9d00/0166/large_jpg/Floor_Plan_1.jpg?1578959545" },
+        { type: t('common.types.villa'), size: "250 m²", img: "https://images.adsttc.com/media/images/5e1d/02c3/3312/fd51/9d00/0166/large_jpg/Floor_Plan_1.jpg?1578959545" },
+        { type: t('common.types.apartment'), size: "450 m²", img: "https://images.adsttc.com/media/images/5e1d/02c3/3312/fd51/9d00/0166/large_jpg/Floor_Plan_1.jpg?1578959545" }
     ];
 
     return (
@@ -56,7 +48,7 @@ const PropertyDetails = () => {
                     <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-end gap-12">
                         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} className="space-y-6 max-w-4xl">
                             <span className="bg-domixa-gold/20 text-domixa-gold px-6 py-2 rounded-full border border-domixa-gold/30 text-[10px] uppercase font-black tracking-[0.5em] backdrop-blur-3xl">
-                                {t(`common.types.${property.type.toLowerCase()}`)} {i18n.language === 'ar' ? 'فاخر' : 'Portfolio'}
+                                {t(`common.types.${property.type.toLowerCase()}`)} {t('common.portfolio')}
                             </span>
                             <h1 className="text-64 md:text-8xl lg:text-9xl font-serif text-white italic leading-[0.8] mb-8">
                                 {property.title[i18n.language]}
@@ -68,19 +60,19 @@ const PropertyDetails = () => {
                         </motion.div>
 
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-white/5 backdrop-blur-3xl p-12 rounded-[4rem] border border-white/10 shadow-2xl text-center min-w-[320px]">
-                            <p className="text-[10px] font-black uppercase text-white/30 tracking-[0.4em] mb-4">Starting From</p>
+                            <p className="text-[10px] font-black uppercase text-white/30 tracking-[0.4em] mb-4">{t('property_details.starting_from')}</p>
                             <p className="text-5xl font-serif font-black italic text-white mb-2">
                                 <span className="text-xs font-bold not-italic mr-2 rtl:ml-2 uppercase tracking-widest opacity-40">{t('common.currency')}</span>
                                 {property.price}
                             </p>
-                            <p className="text-domixa-gold text-xs font-bold tracking-widest uppercase">Investment Grade</p>
+                            <p className="text-domixa-gold text-xs font-bold tracking-widest uppercase">{t('property_details.investment_grade')}</p>
                         </motion.div>
                     </div>
                 </div>
             </section>
 
             {/* 2. Sticky Sub-Nav */}
-            <nav className={`w-full z-40 transition-all duration-500 border-b border-gray-100 ${isNavSticky ? 'fixed top-0 bg-white/95 backdrop-blur-xl shadow-xl' : 'relative bg-white'}`}>
+            <nav className="w-full bg-white border-b border-gray-100 transition-all duration-500">
                 <div className="max-w-[1400px] mx-auto px-6 md:px-12">
                     <div className="flex justify-between items-center h-20">
                         <div className="hidden md:flex gap-12 items-center h-full">
@@ -91,17 +83,17 @@ const PropertyDetails = () => {
                                     className={`text-[10px] font-black uppercase tracking-[0.3em] h-full flex items-center border-b-2 transition-all duration-300 ${activeTab === tab ? 'border-domixa-gold text-domixa-dark' : 'border-transparent text-gray-400 hover:text-domixa-dark'}`}
                                     onClick={() => setActiveTab(tab)}
                                 >
-                                    {tab}
+                                    {t(`property_details.tabs.${tab}`)}
                                 </a>
                             ))}
                         </div>
                         <div className="flex items-center gap-6">
                             <button className="flex items-center gap-3 text-domixa-dark font-black text-[10px] uppercase tracking-widest hover:text-domixa-gold transition-colors">
                                 <Download size={16} />
-                                <span>Brochure</span>
+                                <span>{t('property_details.utility.brochure')}</span>
                             </button>
                             <button className="bg-domixa-dark text-white px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-domixa-gold transition-all shadow-xl">
-                                Private Booking
+                                {t('property_details.utility.booking')}
                             </button>
                         </div>
                     </div>
@@ -113,20 +105,27 @@ const PropertyDetails = () => {
                 <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
                     <div className="lg:col-span-12 text-center mb-12">
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('project.narrative')}</span>
-                        <h2 className="text-6xl md:text-8xl font-serif italic text-domixa-dark leading-tight">Mastering The <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Skyline.</span></h2>
+                        <h2 className={`text-6xl md:text-8xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-[1.2]' : 'font-serif italic leading-tight'} text-domixa-dark`}>
+                            {t('property_details.overview.title_part1')}
+                            <br />
+                            <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">
+                                {t('property_details.overview.title_part2')}
+                                <span className="font-normal">.</span>
+                            </span>
+                        </h2>
                     </div>
                     <div className="lg:col-span-5 space-y-12">
                         <p className="text-gray-400 text-xl font-light italic leading-relaxed">
-                            {property.title[i18n.language]} is more than a residence; it is a declaration of modern sophistication. Designed for those who seek the extraordinary, this asset combines avant-garde architecture with functional luxury.
+                            {t('property_details.overview.desc')}
                         </p>
                         <div className="grid grid-cols-2 gap-12 pt-8">
                             <div className="p-10 bg-domixa-gray rounded-[2.5rem] border border-white shadow-xl">
                                 <p className="text-4xl font-black text-domixa-dark mb-2">Q4 2026</p>
-                                <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest">Handover</p>
+                                <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest">{t('property_details.overview.handover')}</p>
                             </div>
                             <div className="p-10 bg-domixa-gray rounded-[2.5rem] border border-white shadow-xl">
                                 <p className="text-4xl font-black text-domixa-dark mb-2">9.5%</p>
-                                <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest">Rental ROI</p>
+                                <p className="text-[10px] font-black uppercase text-gray-400 tracking-widest">{t('property_details.overview.roi')}</p>
                             </div>
                         </div>
                     </div>
@@ -145,8 +144,14 @@ const PropertyDetails = () => {
             <section id="floorplans" className="section-premium bg-domixa-gray">
                 <div className="max-w-[1400px] mx-auto">
                     <div className="text-center mb-20">
-                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— Architectural Details</span>
-                        <h2 className="text-5xl md:text-7xl font-serif text-domixa-dark italic">Floor <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Blueprints.</span></h2>
+                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('property_details.floorplans.badge')}</span>
+                        <h2 className={`text-5xl md:text-7xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-[1.2]' : 'font-serif italic'} text-domixa-dark`}>
+                            {t('property_details.floorplans.title_part1')}{' '}
+                            <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">
+                                {t('property_details.floorplans.title_part2')}
+                                <span className="font-normal">.</span>
+                            </span>
+                        </h2>
                     </div>
                     <div className="flex flex-col lg:flex-row gap-20">
                         <div className="lg:w-1/3 space-y-4">
@@ -177,9 +182,16 @@ const PropertyDetails = () => {
                     <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-12 text-center md:text-left rtl:md:text-right">
                         <div className="max-w-xl">
                             <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('project.beyond')}</span>
-                            <h2 className="text-5xl md:text-7xl font-serif text-white italic leading-none">Curated <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Facilities.</span></h2>
+                            <h2 className={`text-5xl md:text-7xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-[1.2]' : 'font-serif italic leading-none'} text-white`}>
+                                {t('property_details.features.title_part1')}
+                                <br />
+                                <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">
+                                    {t('property_details.features.title_part2')}
+                                    <span className="font-normal">.</span>
+                                </span>
+                            </h2>
                         </div>
-                        <p className="text-white/40 text-lg font-light italic max-w-xs">Every facility is a statement. Every service is an experience.</p>
+                        <p className="text-white/40 text-lg font-light italic max-w-xs">{t('property_details.features.desc')}</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                         {amenities.map((item, i) => (
@@ -201,14 +213,21 @@ const PropertyDetails = () => {
             <section id="location" className="section-premium">
                 <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
                     <div className="space-y-12">
-                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— Site Strategy</span>
-                        <h2 className="text-5xl md:text-7xl font-serif text-domixa-dark italic leading-tight">Elite <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Connectivity.</span></h2>
+                        <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('property_details.location.badge')}</span>
+                        <h2 className={`text-5xl md:text-7xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-[1.2]' : 'font-serif italic leading-tight'} text-domixa-dark`}>
+                            {t('property_details.location.title_part1')}
+                            <br />
+                            <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">
+                                {t('property_details.location.title_part2')}
+                                <span className="font-normal">.</span>
+                            </span>
+                        </h2>
                         <div className="space-y-8">
                             {[
-                                { title: "Financial District", time: "05 Mins" },
-                                { title: "International Airport", time: "15 Mins" },
-                                { title: "Luxury Retail Mall", time: "08 Mins" },
-                                { title: "Wellness Park", time: "02 Mins" }
+                                { title: t('property_details.location.points.financial'), time: `05 ${t('property_details.location.points.mins')}` },
+                                { title: t('property_details.location.points.airport'), time: `15 ${t('property_details.location.points.mins')}` },
+                                { title: t('property_details.location.points.retail'), time: `08 ${t('property_details.location.points.mins')}` },
+                                { title: t('property_details.location.points.wellness'), time: `02 ${t('property_details.location.points.mins')}` }
                             ].map((loc, i) => (
                                 <div key={i} className="flex justify-between items-center py-4 border-b border-gray-100">
                                     <p className="text-lg font-serif italic text-domixa-dark">{loc.title}</p>
@@ -218,7 +237,7 @@ const PropertyDetails = () => {
                         </div>
                         <button className="btn-elite rounded-2xl flex items-center gap-4">
                             <MapIcon size={18} />
-                            <span>Open Interactive Map</span>
+                            <span>{t('property_details.location.map_btn')}</span>
                         </button>
                     </div>
                     <div className="relative rounded-[4rem] overflow-hidden shadow-2xl h-[600px] border-8 border-white">
@@ -240,13 +259,20 @@ const PropertyDetails = () => {
                 <div className="relative z-10 w-full max-w-5xl px-6 text-center space-y-16">
                     <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('project.limited')}</span>
-                        <h2 className="text-6xl md:text-9xl font-serif text-white italic leading-[0.8]">Initiate <br /> <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">Engagement.</span></h2>
-                        <p className="mt-12 text-white/40 text-2xl font-light italic max-w-2xl mx-auto">Qualified advisors are available for discrete consultation and portfolio strategy.</p>
+                        <h2 className={`text-6xl md:text-9xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-[1.2]' : 'font-serif italic leading-[0.8]'} text-white`}>
+                            {t('property_details.enquire.title_part1')}
+                            <br />
+                            <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">
+                                {t('property_details.enquire.title_part2')}
+                                <span className="font-normal">.</span>
+                            </span>
+                        </h2>
+                        <p className="mt-12 text-white/40 text-2xl font-light italic max-w-2xl mx-auto">{t('property_details.enquire.desc')}</p>
                     </motion.div>
                     <form className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <input type="text" placeholder="Full Name" className="bg-white/5 border border-white/10 rounded-2xl px-8 py-6 text-white text-sm focus:border-domixa-gold outline-none" />
-                        <input type="email" placeholder="Corporate Email" className="bg-white/5 border border-white/10 rounded-2xl px-8 py-6 text-white text-sm focus:border-domixa-gold outline-none" />
-                        <button className="btn-elite rounded-2xl bg-white text-domixa-dark font-black tracking-widest">Submit Proposal</button>
+                        <input type="text" placeholder={t('property_details.enquire.name_placeholder')} className="bg-white/5 border border-white/10 rounded-2xl px-8 py-6 text-white text-sm focus:border-domixa-gold outline-none" />
+                        <input type="email" placeholder={t('property_details.enquire.email_placeholder')} className="bg-white/5 border border-white/10 rounded-2xl px-8 py-6 text-white text-sm focus:border-domixa-gold outline-none" />
+                        <button className="btn-elite rounded-2xl bg-white text-domixa-dark font-black tracking-widest">{t('property_details.enquire.submit')}</button>
                     </form>
                 </div>
             </section>

@@ -20,7 +20,7 @@ const Navbar = () => {
 
     // Force light items when menu is open
     const forceLight = !isScrolled || isOpen;
-    const useDarkText = !hasDarkHero || (isScrolled && !isOpen);
+    const useDarkText = (!hasDarkHero || isScrolled) && !isOpen;
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 20);

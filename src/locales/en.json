@@ -144,12 +144,14 @@
     "masterplan": "Master Plan Developments",
     "launch_map": "Launch Interactive Map",
     "header": {
-      "title": "Architecting Iconic Hubs.",
+      "title_part1": "Architecting",
+      "title_part2": "Iconic Hubs.",
       "active": "Active Sites",
       "delivered": "Delivered"
     },
     "experience": {
-      "title": "Explore the Masterplan.",
+      "title_part1": "Explore the",
+      "title_part2": "Masterplan.",
       "desc": "Navigate through our integrated communities. From dedicated commercial zones to lush residential districts.",
       "district": "Vinci District",
       "zone": "Premium Residential Zone"
@@ -313,6 +315,62 @@
       "studio": "Studio",
       "maisonette": "Maisonette"
     },
-    "currency": "AED"
+    "currency": "AED",
+    "portfolio": "Portfolio"
+  },
+  "property_details": {
+    "starting_from": "Starting From",
+    "investment_grade": "Investment Grade",
+    "tabs": {
+      "overview": "Overview",
+      "floorplans": "Floor Plans",
+      "features": "Features",
+      "location": "Location",
+      "enquire": "Enquire"
+    },
+    "utility": {
+      "brochure": "Brochure",
+      "booking": "Private Booking"
+    },
+    "overview": {
+      "title_part1": "Mastering The",
+      "title_part2": "Skyline",
+      "desc": "More than a residence; it is a declaration of modern sophistication. Designed for those who seek the extraordinary, this asset combines avant-garde architecture with functional luxury.",
+      "handover": "Handover",
+      "roi": "Rental ROI"
+    },
+    "floorplans": {
+      "badge": "Architectural Details",
+      "title_part1": "Floor",
+      "title_part2": "Blueprints"
+    },
+    "features": {
+      "title_part1": "Curated",
+      "title_part2": "Facilities",
+      "desc": "Every facility is a statement. Every service is an experience.",
+      "amenity_smart": "Smart Living",
+      "amenity_lush": "Lush Greenery"
+    },
+    "location": {
+      "badge": "Site Strategy",
+      "title_part1": "Elite",
+      "title_part2": "Connectivity",
+      "map_btn": "Open Interactive Map",
+      "points": {
+        "financial": "Financial District",
+        "airport": "International Airport",
+        "retail": "Luxury Retail Mall",
+        "wellness": "Wellness Park",
+        "mins": "Mins"
+      }
+    },
+    "enquire": {
+      "title_part1": "Initiate",
+      "title_part2": "Engagement",
+      "desc": "Qualified advisors are available for discrete consultation and portfolio strategy.",
+      "name_placeholder": "Full Name",
+      "email_placeholder": "Corporate Email",
+      "submit": "Submit Proposal"
+    }
   }
 }
