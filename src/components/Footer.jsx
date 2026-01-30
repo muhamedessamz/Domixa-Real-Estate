@@ -60,7 +60,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 group">
                                 <Phone size={20} className="text-domixa-gold group-hover:scale-110 transition-transform" />
-                                <span className="text-gray-400 text-sm tracking-widest">+971 4 000 0000</span>
+                                <span className="text-gray-400 text-sm tracking-widest" dir="ltr">+971 4 000 0000</span>
                             </li>
                             <li className="flex items-center gap-3 group">
                                 <Mail size={20} className="text-domixa-gold group-hover:scale-110 transition-transform" />

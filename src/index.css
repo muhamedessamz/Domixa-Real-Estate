@@ -86,7 +86,7 @@
 
 .editorial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
   @apply gap-16 md:gap-20;
 }
 

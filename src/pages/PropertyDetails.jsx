@@ -19,16 +19,16 @@ const PropertyDetails = () => {
     if (!property) return <div className="pt-40 text-center font-serif italic text-2xl">Asset Not Found</div>;
 
     const amenities = [
-        { title: t('property_details.location.points.retail'), img: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=800&q=80" },
-        { title: t('property_details.location.points.wellness'), img: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" },
-        { title: t('property_details.features.amenity_smart'), img: "https://images.unsplash.com/photo-1558002038-1a510526e033?auto=format&fit=crop&w=800&q=80" },
-        { title: t('property_details.features.amenity_lush'), img: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80" }
+        { title: t('property_details.location.points.retail'), img: "https://media.cntravellerme.com/photos/64adaa3b8065f76731bd4b67/16:9/w_2560%2Cc_limit/Hero-Dubai-Mall-Fashion-Avenue-Dubai-Alamy-R9FRB7.jpg" },
+        { title: t('property_details.location.points.wellness'), img: "https://www.nparks.gov.sg/images/default-source/parks-img/east-coast-park/east-coast-park-hero-garden.jpeg" },
+        { title: t('property_details.features.amenity_smart'), img: "https://images.ctfassets.net/16nm6vz43ids/3CFY9PTh7djTH5M0nfPPmU/8c700661c3cfe78a9ab6326fa46269af/How_to_make_smarter_living_room.png?fm=webp&q=65" },
+        { title: t('property_details.features.amenity_lush'), img: "https://thumbs.dreamstime.com/b/aerial-view-rosario-island-community-scenic-aerial-view-lush-green-community-rosario-island-cartagena-colombia-398838586.jpg" }
     ];
 
     const floorPlans = [
-        { type: t('common.types.penthouse'), size: "120 m²", img: "https://images.adsttc.com/media/images/5e1d/02c3/3312/fd51/9d00/0166/large_jpg/Floor_Plan_1.jpg?1578959545" },
-        { type: t('common.types.villa'), size: "250 m²", img: "https://images.adsttc.com/media/images/5e1d/02c3/3312/fd51/9d00/0166/large_jpg/Floor_Plan_1.jpg?1578959545" },
-        { type: t('common.types.apartment'), size: "450 m²", img: "https://images.adsttc.com/media/images/5e1d/02c3/3312/fd51/9d00/0166/large_jpg/Floor_Plan_1.jpg?1578959545" }
+        { type: t('common.types.penthouse'), size: "120 m²", img: "https://www.prestigesoakville.info/images/prestige/prestige-oakville-3-bhk-apartment-floor-plan.webp" },
+        { type: t('common.types.villa'), size: "250 m²", img: "https://images.wondershare.com/edrawmax/articles2024/luxury-house/luxury-one-pic.jpg" },
+        { type: t('common.types.apartment'), size: "450 m²", img: "https://cdn.dribbble.com/userupload/36727022/file/original-8cfd8df9847c29ee92836ae9039edc8d.jpg?resize=752x&vertical=center" }
     ];
 
     return (
@@ -44,22 +44,22 @@ const PropertyDetails = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-domixa-dark via-domixa-dark/20 to-transparent"></div>
 
-                <div className="absolute inset-x-0 bottom-24">
-                    <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-end gap-12">
-                        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} className="space-y-6 max-w-4xl">
+                <div className="absolute inset-x-0 bottom-12 md:bottom-24">
+                    <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col items-center md:items-end md:flex-row justify-between gap-12 text-center md:text-left rtl:md:text-right">
+                        <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} className="space-y-4 md:space-y-6 max-w-4xl flex flex-col items-center md:items-start rtl:md:items-end">
                             <span className="bg-domixa-gold/20 text-domixa-gold px-6 py-2 rounded-full border border-domixa-gold/30 text-[10px] uppercase font-black tracking-[0.5em] backdrop-blur-3xl">
                                 {t(`common.types.${property.type.toLowerCase()}`)} {t('common.portfolio')}
                             </span>
-                            <h1 className="text-64 md:text-8xl lg:text-9xl font-serif text-white italic leading-[0.8] mb-8">
+                            <h1 className="text-5xl md:text-8xl lg:text-9xl font-serif text-white italic leading-tight md:leading-[0.8] mb-4 md:mb-8">
                                 {property.title[i18n.language]}
                             </h1>
-                            <div className="flex items-center gap-6 text-white/50 text-xl font-light italic">
-                                <MapPin className="text-domixa-gold" />
+                            <div className="flex items-center gap-4 md:gap-6 text-white/50 text-lg md:text-xl font-light italic">
+                                <MapPin className="text-domixa-gold w-5 h-5 md:w-6 md:h-6" />
                                 <span>{property.location[i18n.language]}</span>
                             </div>
                         </motion.div>
 
-                        <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-white/5 backdrop-blur-3xl p-12 rounded-[4rem] border border-white/10 shadow-2xl text-center min-w-[320px]">
+                        <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-white/5 backdrop-blur-3xl p-8 md:p-12 rounded-[2.5rem] md:rounded-[4rem] border border-white/10 shadow-2xl text-center w-full md:w-auto md:min-w-[320px]">
                             <p className="text-[10px] font-black uppercase text-white/30 tracking-[0.4em] mb-4">{t('property_details.starting_from')}</p>
                             <p className="text-5xl font-serif font-black italic text-white mb-2">
                                 <span className="text-xs font-bold not-italic mr-2 rtl:ml-2 uppercase tracking-widest opacity-40">{t('common.currency')}</span>
@@ -87,7 +87,7 @@ const PropertyDetails = () => {
                                 </a>
                             ))}
                         </div>
-                        <div className="flex items-center gap-6">
+                        <div className="flex items-center justify-center gap-6 w-full md:w-auto">
                             <button className="flex items-center gap-3 text-domixa-dark font-black text-[10px] uppercase tracking-widest hover:text-domixa-gold transition-colors">
                                 <Download size={16} />
                                 <span>{t('property_details.utility.brochure')}</span>
@@ -115,7 +115,7 @@ const PropertyDetails = () => {
                         </h2>
                     </div>
                     <div className="lg:col-span-5 space-y-12">
-                        <p className="text-gray-400 text-xl font-light italic leading-relaxed">
+                        <p className="text-gray-400 text-xl font-light italic leading-relaxed text-center md:text-left rtl:md:text-right">
                             {t('property_details.overview.desc')}
                         </p>
                         <div className="grid grid-cols-2 gap-12 pt-8">
@@ -131,7 +131,7 @@ const PropertyDetails = () => {
                     </div>
                     <div className="lg:col-span-7">
                         <div className="relative rounded-[4rem] overflow-hidden shadow-2xl aspect-video group">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" />
+                            <img src={property.image} alt="" className="w-full h-full object-cover transition-all duration-1000" />
                             <button className="absolute inset-0 m-auto w-20 h-20 bg-white/10 backdrop-blur-xl rounded-full border border-white/20 flex items-center justify-center text-white scale-0 group-hover:scale-100 transition-transform">
                                 <Eye size={32} />
                             </button>
@@ -179,8 +179,8 @@ const PropertyDetails = () => {
             {/* 5. Amenities Mosaic */}
             <section id="features" className="bg-domixa-dark py-40">
                 <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-32 gap-12 text-center md:text-left rtl:md:text-right">
-                        <div className="max-w-xl">
+                    <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-32 gap-12 text-center md:text-left rtl:md:text-right">
+                        <div className="max-w-xl mx-auto md:mx-0">
                             <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('project.beyond')}</span>
                             <h2 className={`text-5xl md:text-7xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-[1.2]' : 'font-serif italic leading-none'} text-white`}>
                                 {t('property_details.features.title_part1')}
@@ -191,13 +191,13 @@ const PropertyDetails = () => {
                                 </span>
                             </h2>
                         </div>
-                        <p className="text-white/40 text-lg font-light italic max-w-xs">{t('property_details.features.desc')}</p>
+                        <p className="text-white/40 text-lg font-light italic max-w-xs mx-auto md:mx-0">{t('property_details.features.desc')}</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                         {amenities.map((item, i) => (
                             <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className={`flex flex-col space-y-8 ${i % 2 === 1 ? 'md:mt-24' : ''}`}>
                                 <div className="relative rounded-[3rem] overflow-hidden h-[500px] shadow-2xl group">
-                                    <img src={item.img} alt="" className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110" />
+                                    <img src={item.img} alt="" className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" />
                                     <div className="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-domixa-dark to-transparent text-white">
                                         <p className="text-3xl font-serif italic mb-2">{item.title}</p>
                                         <div className="h-px w-12 bg-domixa-gold opacity-50"></div>
@@ -212,7 +212,7 @@ const PropertyDetails = () => {
             {/* 6. Location Strategy */}
             <section id="location" className="section-premium">
                 <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-                    <div className="space-y-12">
+                    <div className="space-y-12 flex flex-col items-center md:items-start text-center md:text-left rtl:md:text-right">
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('property_details.location.badge')}</span>
                         <h2 className={`text-5xl md:text-7xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-[1.2]' : 'font-serif italic leading-tight'} text-domixa-dark`}>
                             {t('property_details.location.title_part1')}
@@ -222,7 +222,7 @@ const PropertyDetails = () => {
                                 <span className="font-normal">.</span>
                             </span>
                         </h2>
-                        <div className="space-y-8">
+                        <div className="space-y-8 w-full max-w-lg">
                             {[
                                 { title: t('property_details.location.points.financial'), time: `05 ${t('property_details.location.points.mins')}` },
                                 { title: t('property_details.location.points.airport'), time: `15 ${t('property_details.location.points.mins')}` },
@@ -235,13 +235,13 @@ const PropertyDetails = () => {
                                 </div>
                             ))}
                         </div>
-                        <button className="btn-elite rounded-2xl flex items-center gap-4">
+                        <button className="btn-elite rounded-2xl flex items-center gap-4 mx-auto md:mx-0">
                             <MapIcon size={18} />
                             <span>{t('property_details.location.map_btn')}</span>
                         </button>
                     </div>
                     <div className="relative rounded-[4rem] overflow-hidden shadow-2xl h-[600px] border-8 border-white">
-                        <img src="https://images.unsplash.com/photo-1541339907198-e08756edd81f?auto=format&fit=crop&w=1200&q=80" className="w-full h-full object-cover grayscale" />
+                        <img src="https://www.shutterstock.com/image-illustration/dubai-city-map-black-white-600nw-2485950893.jpg" className="w-full h-full object-cover opacity-80" />
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                             <div className="w-8 h-8 bg-domixa-gold rounded-full animate-ping"></div>
                             <div className="absolute top-0 left-0 w-8 h-8 bg-domixa-gold rounded-full border-4 border-white shadow-2xl"></div>
@@ -253,13 +253,13 @@ const PropertyDetails = () => {
             {/* 7. Grand Inquire Section */}
             <section id="enquire" className="relative h-[800px] flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 text-white">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=90" className="w-full h-full object-cover opacity-50 grayscale" />
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=90" className="w-full h-full object-cover opacity-50" />
                     <div className="absolute inset-0 bg-domixa-dark/95"></div>
                 </div>
                 <div className="relative z-10 w-full max-w-5xl px-6 text-center space-y-16">
                     <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                         <span className="text-domixa-gold font-bold uppercase tracking-[0.4em] text-[10px] mb-8 block">— {t('project.limited')}</span>
-                        <h2 className={`text-6xl md:text-9xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-[1.2]' : 'font-serif italic leading-[0.8]'} text-white`}>
+                        <h2 className={`text-5xl md:text-9xl ${i18n.language === 'ar' ? 'font-arabic-title font-black leading-tight md:leading-[1.2]' : 'font-serif italic leading-tight md:leading-[0.8]'} text-white`}>
                             {t('property_details.enquire.title_part1')}
                             <br />
                             <span className="not-italic font-black text-domixa-gold uppercase tracking-tighter">
@@ -267,7 +267,7 @@ const PropertyDetails = () => {
                                 <span className="font-normal">.</span>
                             </span>
                         </h2>
-                        <p className="mt-12 text-white/40 text-2xl font-light italic max-w-2xl mx-auto">{t('property_details.enquire.desc')}</p>
+                        <p className="mt-8 md:mt-12 text-white/40 text-lg md:text-2xl font-light italic max-w-2xl mx-auto">{t('property_details.enquire.desc')}</p>
                     </motion.div>
                     <form className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <input type="text" placeholder={t('property_details.enquire.name_placeholder')} className="bg-white/5 border border-white/10 rounded-2xl px-8 py-6 text-white text-sm focus:border-domixa-gold outline-none" />

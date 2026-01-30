@@ -43,19 +43,19 @@ const Properties = () => {
                 </div>
 
                 {/* Sophisticated Search & Filters */}
-                <div className="bg-white p-4 rounded-[2.5rem] shadow-2xl border border-gray-100 flex flex-col lg:flex-row gap-4 items-center mb-24">
+                <div className="bg-white p-3 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-gray-100 flex flex-col lg:flex-row gap-4 items-center mb-24">
                     <div className="flex-1 w-full relative group">
-                        <Search className="absolute left-6 rtl:right-6 top-1/2 -translate-y-1/2 text-gray-300 group-hover:text-domixa-gold transition-colors" size={20} />
+                        <Search className="absolute left-6 rtl:right-6 top-1/2 -translate-y-1/2 text-gray-300 group-hover:text-domixa-gold transition-colors" size={18} />
                         <input
                             type="text"
                             placeholder={t('properties.search.placeholder')}
-                            className="w-full pl-16 pr-6 rtl:pr-16 rtl:pl-6 py-5 bg-gray-50/50 rounded-2xl border-none focus:ring-1 focus:ring-domixa-gold/30 outline-none text-sm transition-all font-medium"
+                            className="w-full pl-14 pr-4 rtl:pr-14 rtl:pl-4 py-4 md:py-5 bg-gray-50/50 rounded-xl md:rounded-2xl border-none focus:ring-1 focus:ring-domixa-gold/30 outline-none text-xs md:text-sm transition-all font-medium"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                         />
                     </div>
 
-                    <div className="flex items-center gap-3 w-full lg:w-auto overflow-x-auto py-2 lg:py-0 scrollbar-hide">
+                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 md:gap-3 w-full lg:w-auto py-2 lg:py-0">
                         {[
                             { key: 'All', label: t('properties.cities.all') },
                             { key: 'Dubai', label: t('properties.cities.dubai') },
@@ -66,7 +66,7 @@ const Properties = () => {
                             <button
                                 key={city.key}
                                 onClick={() => setFilterCity(city.key)}
-                                className={`px-8 py-4 rounded-2xl text-[10px] uppercase font-black tracking-widest whitespace-nowrap transition-all duration-500 ${filterCity === city.key ? 'bg-domixa-dark text-white shadow-xl' : 'bg-white text-gray-400 hover:text-domixa-dark border border-gray-100'}`}
+                                className={`px-5 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl text-[9px] md:text-[10px] uppercase font-black tracking-widest transition-all duration-500 flex-1 sm:flex-none text-center ${filterCity === city.key ? 'bg-domixa-dark text-white shadow-xl' : 'bg-white text-gray-400 hover:text-domixa-dark border border-gray-100'}`}
                             >
                                 {city.label}
                             </button>
@@ -99,16 +99,16 @@ const Properties = () => {
                                     </div>
                                 </div>
 
-                                <div className="px-4 space-y-3">
+                                <div className="px-4 space-y-3 flex flex-col items-center md:items-start text-center md:text-left rtl:md:text-right">
                                     <div className="flex items-center text-domixa-gold text-[10px] font-black uppercase tracking-[0.2em] gap-2">
                                         <MapPin size={14} />
                                         <span>{property.location[i18n.language]}</span>
                                     </div>
-                                    <h3 className="text-3xl font-serif font-black text-domixa-dark leading-tight group-hover:text-domixa-gold transition-colors truncate">
+                                    <h3 className="text-3xl font-serif font-black text-domixa-dark leading-tight group-hover:text-domixa-gold transition-colors truncate w-full">
                                         {property.title[i18n.language]}
                                     </h3>
 
-                                    <div className="flex justify-between items-center pt-6 pb-2 border-t border-gray-100 text-gray-400">
+                                    <div className="flex justify-between items-center pt-6 pb-6 border-t border-gray-100 text-gray-400 w-full mb-4">
                                         <div className="flex items-center gap-2">
                                             <BedDouble size={16} className="text-gray-300" />
                                             <span className="text-[10px] font-bold uppercase tracking-widest text-domixa-dark">{property.beds} {t('common.beds')}</span>
@@ -118,6 +118,13 @@ const Properties = () => {
                                             {property.price}
                                         </p>
                                     </div>
+                                    <Link
+                                        to={`/property/${property.id}`}
+                                        className="w-full bg-domixa-dark text-white py-4 rounded-2xl text-[10px] font-black uppercase tracking-[0.3em] hover:bg-domixa-gold transition-all shadow-xl flex items-center justify-center gap-3 group/btn"
+                                    >
+                                        <span>{t('common.details')}</span>
+                                        <ArrowUpRight size={14} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                                    </Link>
                                 </div>
                             </motion.div>
                         ))}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, Phone, MapPin, Linkedin, Instagram, ArrowUpRight, ChevronDown, ArrowRight, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowUpRight, ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Contact = () => {
@@ -55,7 +55,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <p className="font-bold text-lg mb-2 italic">{t('contact.hq.line')}</p>
-                                        <p className="text-white/40 text-sm tracking-[0.2em]">+971 4 000 0000</p>
+                                        <p className="text-white/40 text-sm tracking-[0.2em]" dir="ltr">+971 4 000 0000</p>
                                     </div>
                                 </div>
 
@@ -70,9 +70,8 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-20 pt-12 border-t border-white/5 flex gap-8 relative z-10">
-                                <a href="#" className="text-white/30 hover:text-domixa-gold transition-colors"><Linkedin size={24} /></a>
-                                <a href="#" className="text-white/30 hover:text-domixa-gold transition-colors"><Instagram size={24} /></a>
+                            <div className="mt-20 relative z-10">
+                                {/* Social media links removed as per corporate styling preference */}
                             </div>
                         </div>
 
@@ -155,14 +154,6 @@ const Contact = () => {
                                     <ArrowUpRight size={18} />
                                 </button>
                                 <p className="text-center text-[10px] font-bold text-gray-300 tracking-widest mt-8 uppercase">{t('contact.form.confidential')}</p>
-
-                                {/* Social Media Integration */}
-                                <div className="mt-12 pt-8 border-t border-gray-50 flex justify-center gap-8">
-                                    <a href="#" className="text-gray-300 hover:text-domixa-gold transition-colors"><Facebook size={20} /></a>
-                                    <a href="#" className="text-gray-300 hover:text-domixa-gold transition-colors"><Twitter size={20} /></a>
-                                    <a href="#" className="text-gray-300 hover:text-domixa-gold transition-colors"><Instagram size={20} /></a>
-                                    <a href="#" className="text-gray-300 hover:text-domixa-gold transition-colors"><Linkedin size={20} /></a>
-                                </div>
                             </div>
                         </form>
                     </div>
